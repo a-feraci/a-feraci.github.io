@@ -6,28 +6,6 @@ e /* Universal Syles */
     font-family: 'Ruda', sans-serif;
 }
 
-/* Works on Firefox */
-/* * {
-  scrollbar-width: thin;
-  scrollbar-color: blue orange;
-}
-
-/* Works on Chrome, Edge, and Safari */
-/* *::-webkit-scrollbar {
-  width: 12px;
-} */
-
-/* *::-webkit-scrollbar-track {
-  background: orange;
-} */
-/* 
-*::-webkit-scrollbar-thumb {
-  background-color: blue;
-  border-radius: 20px;
-  border: 3px solid orange;
-}
- */ */
-
 .container {
     background-image: url(tumblr_ecb93b6eca3f91641d841e38cf5d4d59_5eca6153_1280.jpg);
     background-attachment: fixed;
