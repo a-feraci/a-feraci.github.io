@@ -1,9 +1,11 @@
 .breadcrumb {
     text-align: left;
+    list-style-type: none;
   }
   
   .breadcrumb li {
     float: left;
+    list-style-type: none;
   }
   
   .breadcrumb a {
