@@ -1,6 +1,9 @@
 .breadcrumb {
-    text-align: left;
+    text-align: center;
     list-style-type: none;
+    left: auto;
+    right: auto;
+    width: 100%;
   }
   
   .breadcrumb li {
@@ -54,4 +57,8 @@
   }
   .breadcrumb a:hover::after {
     border-left-color: #5f2557ff;
+  }
+
+  section {
+    text-align: center;
   }

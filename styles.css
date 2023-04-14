@@ -41,8 +41,10 @@
   .font-panel {
     color: white;
     width: fit-content;
-    background-color: #a603a6b0;
+    background-color: #a603a675;
     filter: drop-shadow(0 0 0.2rem black);
+    padding: 1px;
+    margin-bottom: 0.5rem;
   }
 
   .text-container {
@@ -134,6 +136,7 @@ h2{
     padding-top: 20px;
     text-align: center;
     text-transform: uppercase;
+    filter: drop-shadow(0 0 0.85rem rgb(146, 9, 36));
 }
 
 h3{
@@ -255,3 +258,7 @@ body {
 
 
    /* Footer */
+
+  footer {
+    position: fixed;
+  }
