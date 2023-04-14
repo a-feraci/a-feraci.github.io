@@ -18,11 +18,12 @@
 .container {
     background-image: url(tumblr_ecb93b6eca3f91641d841e38cf5d4d59_5eca6153_1280.jpg);
     background-attachment: fixed;
-    border: 2px solid var(--tomato);
+    border: 4px solid var(--tomato);
     padding: 10px;
     margin: 10px auto;
     width: 1000px;
     height: 500px;
+    border-radius: 25px;
   }
   
   .color-container {
@@ -34,7 +35,7 @@
   .font-container {
     overflow-x: auto;
     overflow-y: scroll;
-    height: 55vh;
+    height: 50vh;
     width: 66vw;
   }
 
@@ -45,6 +46,7 @@
     filter: drop-shadow(0 0 0.2rem black);
     padding: 1px;
     margin-bottom: 0.5rem;
+    border-radius: 25px;
   }
 
   .text-container {
