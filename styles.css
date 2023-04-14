@@ -1,7 +1,16 @@
-e /* Universal Syles */
+  /* Universal Syles */
+
+:root {
+  --palatinate: #5f2557ff;
+  --phlox: #cc2aeeff;
+  --bright-pink-crayola: #fe667bff;
+  --papaya-whip: #ffefd5ff;
+  --sandy-brown: #feb780ff;
+  --tomato: #ff4637ff;
+}
 
  html{
-    background-color: #f4b88b;
+    background-color: rgba(244, 149, 82, 0.956);
     color:#5f2557ff;
     font-family: 'Ruda', sans-serif;
 }
@@ -9,7 +18,7 @@ e /* Universal Syles */
 .container {
     background-image: url(tumblr_ecb93b6eca3f91641d841e38cf5d4d59_5eca6153_1280.jpg);
     background-attachment: fixed;
-    border: 2px solid #FF4637;
+    border: 2px solid var(--tomato);
     padding: 10px;
     margin: 10px auto;
     width: 1000px;
@@ -25,7 +34,15 @@ e /* Universal Syles */
   .font-container {
     overflow-x: auto;
     overflow-y: scroll;
-    height: 300px;
+    height: 55vh;
+    width: 66vw;
+  }
+
+  .font-panel {
+    color: white;
+    width: fit-content;
+    background-color: #a603a6b0;
+    filter: drop-shadow(0 0 0.2rem black);
   }
 
   .text-container {
@@ -47,32 +64,48 @@ e /* Universal Syles */
     margin: 20px auto;
     min-height: 100px;
   }
+
+   /*        ScrollBar 2    */
+        
+#scrollbar2::-webkit-scrollbar {
+    width: 20px;
+}
+
+#scrollbar2::-webkit-scrollbar-track {
+    background-color: transparent;
+}
+
+#scrollbar2::-webkit-scrollbar-thumb {
+    background-image: url('https://i.ibb.co/1RHr40z/248599.png'); 
+    background-repeat: no-repeat, no-repeat;
+    background-size: 20px;
+}
   
   .palatinate {
-    background-color: #5f2557ff;
+    background-color: var(--palatinate);
     color: #fff;
   }
 
   .phlox {
-    background-color: #cc2aeeff;
+    background-color: var(--phlox);
     color: #fff;
   }
   
   .papaya-whip {
-    background-color: #ffefd5ff;
+    background-color: var(--papaya-whip);
     color: #000;
   }
   
   .sandy-brown {
-    background-color: #FEB780;
+    background-color: var(--sandy-brown);
   }
   
   .tomato {
-    background-color: #FF4637;
+    background-color: var(--tomato);
   }
 
  .bright-pink-crayola {
-    background-color: #ff5666ff;
+    background-color: var(--bright-pink-crayola);
  }
 
 
@@ -142,9 +175,80 @@ h5 {
 
   /* Nav */
 
-  nav{
+  * {
+    box-sizing: border-box;
+}
 
-  }
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgba(244, 149, 82, 0.956);
+    padding: 10px;
+}
+
+.brand {
+    color: #fff;
+    text-decoration: none;
+}
+
+.navbar-toggle {
+    display: none;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+.bar {
+    width: 25px;
+    height: 3px;
+    background-color: #fff;
+    margin: 4px 0;
+    display: block;
+}
+
+.navbar-menu {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+.navbar-menu li a {
+    display: block;
+    color: #fff;
+    text-decoration: none;
+    padding: 10px;
+}
+
+.navbar-menu li a:hover {
+    background-color: var(--bright-pink-crayola);
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    .navbar-menu {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        right: 0;
+        background-color: var(--sandy-brown);
+        width: 100%;
+    }
+    .navbar-menu.show {
+        display: flex;
+    }
+    .navbar-toggle {
+        display: block;
+    }
+}
 
   /* Section */
 
