@@ -7,10 +7,24 @@
 <title>Style and Design Guide</title>
 <link rel="stylesheet"href="styles.css">
 <link rel="stylesheet" type="text/css" href="breadcrumbs.css">
+<script type="text/javascript" src="script.js" defer></script>
 </head>
 <body>
     <header>
-        <nav></nav>
+        <nav class="navbar">
+            <a href="#" class="brand">Style Guide</a>
+            <button class="navbar-toggle" onclick="toggleMenu()">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
+            <ul class="navbar-menu">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Colors</a></li>
+                <li><a href="#">Fonts</a></li>
+                <li><a href="#">Text Styles</a></li>
+            </ul>
+        </nav>
         <div class="jumbotron">
             <h1>Design/Style Guide</h1>
         </div>
@@ -21,6 +35,7 @@
                 <li class="attribute"><a href="textstyles.html">Text Sytles</a></li>
             </ul>
     </header>
+    <script src="script.js"></script>
     <main class="banner">
         <section>
             <div class="container">
@@ -31,5 +46,6 @@
               </div>
         </section>
     </main>
+    <footer><h4>Style Guide</h4></footer>
 </body>
 </html>
