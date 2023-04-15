@@ -23,35 +23,35 @@
     padding: 10px;
     margin: 10px auto;
     width: 1000px;
-    height: 450px;
+    height: 495px;
     border-radius: 25px;
   }
   
   .color-container {
     overflow-x: auto;
     overflow-y: scroll;
-    height: 42vh;
+    height: 45vh;
     width: 66vw;
   }
 
   .font-container {
     overflow-x: auto;
     overflow-y: scroll;
-    height: 42vh;
+    height: 45vh;
     width: 66vw;
   }
 
   .text-container {
     overflow-x: auto;
     overflow-y: scroll;
-    height: 42vh;
+    height: 45vh;
     width: 66vw;
   }
 
   .home-container {
     overflow-x: auto;
     overflow-y: scroll;
-    height: 42vh;
+    height: 45vh;
     width: 66vw;
   }
   
@@ -182,7 +182,7 @@
 
  h1{
     color:#ffefd5ff;
-    font-family: 'Ruda', sans-serif;
+    font-family: 'Press Start 2P', cursive;
     font-size: 70px;
     font-weight: 900;
     margin: 0px;
@@ -193,7 +193,7 @@
 
 h2{
     color:#FEB780;
-    font-family: 'Ruda', sans-serif;
+    font-family: 'Khand', sans-serif;
     font-size: 60px;
     font-weight: 900;
     margin: 0px;
@@ -215,7 +215,7 @@ h3{
 }
 h4 {
     color:var(--bright-pink-crayola);
-    font-family: 'Ruda', sans-serif;
+    font-family: 'Press Start 2P', cursive;
     font-size: 40px;
     font-weight: 600;
     margin: 0px;
