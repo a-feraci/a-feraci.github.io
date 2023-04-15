@@ -53,8 +53,7 @@
     overflow-x: auto;
     overflow-y: scroll;
     height: 45vh;
-    width: 35vw;
-    text-align: center;
+    width: 66vw;
   }
   
  .home-panel {
@@ -263,7 +262,7 @@ h4 {
 }
 
 h5 {
-    color:#5f2557ff;
+    color: var(--tomato);
     font-family: 'Ruda', sans-serif;
     font-size: 30px;
     font-weight: 900;
