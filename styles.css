@@ -144,34 +144,40 @@
 #scrollbar4::-webkit-scrollbar-thumb {
     background-image: url('https://i.ibb.co/1RHr40z/248599.png'); 
     background-repeat: no-repeat, no-repeat;
-    background-size: 20px;
+    background-size: 70px;
 }
   
   .palatinate {
     background-color: var(--palatinate);
     color: #fff;
+    border-radius: 70px;
   }
 
   .phlox {
     background-color: var(--phlox);
     color: #fff;
+    border-radius: 70px;
   }
   
   .papaya-whip {
     background-color: var(--papaya-whip);
     color: #000;
+    border-radius: 70px;
   }
   
   .sandy-brown {
     background-color: var(--sandy-brown);
+    border-radius: 70px;
   }
   
   .tomato {
     background-color: var(--tomato);
+    border-radius: 70px;
   }
 
  .bright-pink-crayola {
     background-color: var(--bright-pink-crayola);
+    border-radius: 70px;
  }
 
 
