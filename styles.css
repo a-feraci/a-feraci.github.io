@@ -22,10 +22,13 @@
     background-attachment: fixed;
     border: 4px solid var(--tomato);
     padding: 10px;
-    margin: 10px auto;
-    width: 1000px;
-    height: 495px;
+    margin: 2% 20%;
+    width: auto;
+    height: auto;
     border-radius: 25px;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
   }
   
   .color-container {
@@ -33,6 +36,9 @@
     overflow-y: scroll;
     height: 45vh;
     width: 66vw;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
   }
 
   .font-container {
@@ -40,6 +46,9 @@
     overflow-y: scroll;
     height: 45vh;
     width: 66vw;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
   }
 
   .text-container {
@@ -47,6 +56,9 @@
     overflow-y: scroll;
     height: 45vh;
     width: 66vw;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
   }
 
   .home-container {
@@ -54,6 +66,9 @@
     overflow-y: scroll;
     height: 45vh;
     width: 66vw;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
   }
   
  .home-panel {
@@ -64,6 +79,10 @@
     padding: 1px;
     margin-bottom: 0.5rem;
     border-radius: 25px;
+    line-height: 215%;
+    display: inline-flex;
+    flex-direction: column;
+    justify-content: space-between;
   }
 
   .font-panel {
@@ -74,6 +93,9 @@
     padding: 1px;
     margin-bottom: 0.5rem;
     border-radius: 25px;
+    display: inline-flex;
+    flex-direction: column;
+    justify-content: space-between;
   }
 
   .font-label press-start-2p {
@@ -102,6 +124,10 @@
     padding: 1px;
     margin-bottom: 0.5rem;
     border-radius: 25px;
+    line-height: 410%;
+    display: inline-flex;
+    flex-direction: column;
+    justify-content: space-between;
   }
 
   .color-panel {
@@ -111,6 +137,9 @@
     margin: 20px auto;
     min-height: 100px;
     filter: drop-shadow(0 0 0.5rem black);
+    display: inline-flex;
+    flex-direction: column;
+    justify-content: space-between;
   }
 
    /*        ScrollBar 1    */
