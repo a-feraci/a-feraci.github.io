@@ -8,10 +8,11 @@
   --sandy-brown: #feb780ff;
   --tomato: #ff4637ff;
   --transparent: #f263ff69;
+  --background: rgba(255, 155, 83, 0.956);
 }
 
  html{
-    background-color: rgba(244, 149, 82, 0.956);
+    background-color: rgba(46, 0, 78, 0.956);
     color:#5f2557ff;
     font-family: 'Ruda', sans-serif;
 }
@@ -228,7 +229,7 @@ h4 {
     padding-top: 20px;
     text-align: left;
     text-transform: uppercase;
-    filter: drop-shadow(10px 5px 4px var(--palatinate));
+    filter: drop-shadow(10px 5px 4px var(--phlox));
 }
 
 h5 {
@@ -262,7 +263,7 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: rgba(244, 149, 82, 0.956);
+    background-color: var(--background);
     padding: 10px;
 }
 
