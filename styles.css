@@ -7,6 +7,7 @@
   --papaya-whip: #ffefd5ff;
   --sandy-brown: #feb780ff;
   --tomato: #ff4637ff;
+  --transparent: #f263ff69;
 }
 
  html{
@@ -22,45 +23,58 @@
     padding: 10px;
     margin: 10px auto;
     width: 1000px;
-    height: 500px;
+    height: 450px;
     border-radius: 25px;
   }
   
   .color-container {
     overflow-x: auto;
     overflow-y: scroll;
-    height: 300px;
+    height: 42vh;
+    width: 66vw;
   }
 
   .font-container {
     overflow-x: auto;
     overflow-y: scroll;
-    height: 50vh;
+    height: 42vh;
     width: 66vw;
   }
 
+  .text-container {
+    overflow-x: auto;
+    overflow-y: scroll;
+    height: 42vh;
+    width: 66vw;
+  }
+
+  .home-container {
+    overflow-x: auto;
+    overflow-y: scroll;
+    height: 42vh;
+    width: 66vw;
+  }
+  
   .font-panel {
     color: white;
     width: fit-content;
-    background-color: #a603a675;
+    background-color: var(--transparent);
     filter: drop-shadow(0 0 0.2rem black);
     padding: 1px;
     margin-bottom: 0.5rem;
     border-radius: 25px;
   }
 
-  .text-container {
-    overflow-x: auto;
-    overflow-y: scroll;
-    height: 300px;
+  .text-panel {
+    color: white;
+    width: fit-content;
+    background-color: var(--transparent);
+    filter: drop-shadow(0 0 0.2rem black);
+    padding: 1px;
+    margin-bottom: 0.5rem;
+    border-radius: 25px;
   }
 
-  .home-container {
-    overflow-x: auto;
-    overflow-y: scroll;
-    height: 300px;
-  }
-  
   .color-panel {
     display: inline-block;
     width: 32%;
@@ -69,7 +83,23 @@
     min-height: 100px;
   }
 
-   /*        ScrollBar 2    */
+   /*        ScrollBar 1    */
+        
+   #scrollbar1::-webkit-scrollbar {
+    width: 20px;
+}
+
+#scrollbar1::-webkit-scrollbar-track {
+    background-color: transparent;
+}
+
+#scrollbar1::-webkit-scrollbar-thumb {
+    background-image: url('https://i.ibb.co/1RHr40z/248599.png'); 
+    background-repeat: no-repeat, no-repeat;
+    background-size: 20px;
+}
+
+  /*        ScrollBar 2    */
         
 #scrollbar2::-webkit-scrollbar {
     width: 20px;
@@ -80,6 +110,38 @@
 }
 
 #scrollbar2::-webkit-scrollbar-thumb {
+    background-image: url('https://i.ibb.co/1RHr40z/248599.png'); 
+    background-repeat: no-repeat, no-repeat;
+    background-size: 20px;
+}
+
+   /*        ScrollBar 3    */
+        
+   #scrollbar3::-webkit-scrollbar {
+    width: 20px;
+}
+
+#scrollbar3::-webkit-scrollbar-track {
+    background-color: transparent;
+}
+
+#scrollbar3::-webkit-scrollbar-thumb {
+    background-image: url('https://i.ibb.co/1RHr40z/248599.png'); 
+    background-repeat: no-repeat, no-repeat;
+    background-size: 20px;
+}
+
+   /*        ScrollBar 4    */
+        
+   #scrollbar4::-webkit-scrollbar {
+    width: 20px;
+}
+
+#scrollbar4::-webkit-scrollbar-track {
+    background-color: transparent;
+}
+
+#scrollbar4::-webkit-scrollbar-thumb {
     background-image: url('https://i.ibb.co/1RHr40z/248599.png'); 
     background-repeat: no-repeat, no-repeat;
     background-size: 20px;
@@ -142,24 +204,25 @@ h2{
 }
 
 h3{
-    color:#FEB780;
+    color: var(--phlox);
     font-family: 'Ruda', sans-serif;
     font-size: 50px;
-    font-weight: 900;
+    font-weight: 600;
     margin: 0px;
     padding-top: 20px;
     text-align: left;
     text-transform: uppercase;
 }
 h4 {
-    color:#cc2aeeff;
+    color:var(--bright-pink-crayola);
     font-family: 'Ruda', sans-serif;
     font-size: 40px;
-    font-weight: 900;
+    font-weight: 600;
     margin: 0px;
     padding-top: 20px;
     text-align: left;
     text-transform: uppercase;
+    filter: drop-shadow(10px 5px 4px var(--palatinate));
 }
 
 h5 {
@@ -186,7 +249,7 @@ h5 {
 
 body {
     margin: 0;
-    font-family: Arial, sans-serif;
+    font-family: 'Ruda', sans-serif;
 }
 
 .navbar {
@@ -263,4 +326,5 @@ body {
 
   footer {
     position: fixed;
+    align-items: center;
   }
