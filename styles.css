@@ -12,7 +12,8 @@
 }
 
  html{
-    background-color: rgba(46, 0, 78, 0.956);
+    /* background-color: rgba(46, 0, 78, 0.956); */
+    background: linear-gradient(#e66465, #9198e5);
     color:#5f2557ff;
     font-family: 'Ruda', sans-serif;
 }
@@ -22,13 +23,14 @@
     background-attachment: fixed;
     border: 4px solid var(--tomato);
     padding: 10px;
-    margin: 2% 20%;
+    margin: 2% 16%;
     width: auto;
     height: auto;
     border-radius: 25px;
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
+    z-index: -1;
   }
   
   .color-container {
@@ -323,6 +325,8 @@ body {
     align-items: center;
     background-color: var(--background);
     padding: 10px;
+    position: sticky;
+    /* z-index: 1; */
 }
 
 .brand {
@@ -390,6 +394,7 @@ body {
    /* Footer */
 
   footer {
-    position: fixed;
+    position: sticky;
+    /* z-index: 0; */
     align-items: center;
   }
