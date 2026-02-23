@@ -31,10 +31,13 @@
       --shadow2: 0 10px 25px rgba(0,0,0,.40);
       --radius: 18px;
 
-      /* ✅ NEW: layout vars for fixed header/footer */
-      --hdrH: 220px;
+      /* ✅ layout vars for fixed header/footer */
+      --hdrH: 190px;          /* ✅ lowered default fallback (actual set by JS) */
       --ftrH: 56px;
-      --sidePad: 60px; /* ✅ larger left/right margin */
+
+      /* ✅ MORE margins */
+      --sidePad: 110px;       /* ✅ increased left/right page padding */
+      --contentMax: 720px;    /* ✅ make middle content narrower */
     }
 
     /* ====== Base ====== */
@@ -49,9 +52,8 @@
         radial-gradient(900px 900px at 60% 90%, rgba(166,107,255,.18), transparent 55%),
         linear-gradient(180deg, var(--bg0), #050611 70%, #04040c);
       letter-spacing: .2px;
-      text-align: center; /* ✅ centered text overall */
+      text-align: center;
 
-      /* ✅ NEW: fixed background + fixed header/footer setup */
       overflow: hidden; /* only content scrolls */
       background-attachment: fixed;
     }
@@ -70,17 +72,17 @@
       mix-blend-mode:screen;
     }
 
-    /* ✅ remove stray top-of-page title duplication spacing (you had an extra h1/subtitle outside .page) */
+    /* remove stray top-of-page title duplication spacing */
     body > h1, body > .subtitle { display:none; }
 
     .page{
-      max-width: 920px;
+      max-width: 980px;
       margin: 0 auto;
 
-      /* ✅ NEW: larger side margins */
+      /* ✅ bigger side margins */
       padding: 0 var(--sidePad);
 
-      display:flex;               /* ✅ center layout blocks */
+      display:flex;
       flex-direction:column;
       align-items:center;
       height: 100vh;
@@ -89,14 +91,17 @@
 
     /* ====== Hero ====== */
     .hero{
-      width: min(920px, calc(100vw - (var(--sidePad) * 2)));
+      width: min(var(--contentMax), calc(100vw - (var(--sidePad) * 2)));
       background: linear-gradient(180deg, rgba(255,255,255,.06), rgba(255,255,255,.03));
       border:1px solid var(--line);
       border-radius: calc(var(--radius) + 6px);
-      padding: 26px 22px 18px;
+
+      /* ✅ Shorter header: less padding */
+      padding: 16px 18px 12px;
+
       box-shadow: var(--shadow);
-      position:fixed;           /* ✅ NEW: fixed header */
-      top: 18px;
+      position:fixed;
+      top: 14px;
       left: 50%;
       transform: translateX(-50%);
       overflow:hidden;
@@ -117,25 +122,31 @@
 
     .badge{
       display:inline-block;
-      padding: 8px 12px;
+
+      /* ✅ slightly smaller */
+      padding: 6px 10px;
+
       border-radius: 999px;
       background: rgba(255,255,255,.06);
       border:1px solid rgba(255,255,255,.10);
       color: var(--muted);
-      font-size: 13px;
+      font-size: 12px;
       position:relative;
       z-index:1;
       font-family: "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
     }
 
-    /* ✅ NEW: glitch triangle above title */
+    /* glitch triangle above title */
     .glitchTri{
       width: 0;
       height: 0;
-      border-left: 18px solid transparent;
-      border-right: 18px solid transparent;
-      border-bottom: 30px solid rgba(51,230,255,.85);
-      margin: 12px auto 8px;
+
+      /* ✅ slightly smaller triangle */
+      border-left: 14px solid transparent;
+      border-right: 14px solid transparent;
+      border-bottom: 24px solid rgba(51,230,255,.85);
+
+      margin: 10px auto 6px;
       position: relative;
       z-index: 2;
       filter: drop-shadow(0 0 10px rgba(51,230,255,.25)) drop-shadow(0 0 14px rgba(255,79,216,.18));
@@ -144,12 +155,12 @@
     .glitchTri:before{
       content:"";
       position:absolute;
-      left:-18px;
-      top: 3px;
+      left:-14px;
+      top: 2px;
       width:0; height:0;
-      border-left: 18px solid transparent;
-      border-right: 18px solid transparent;
-      border-bottom: 30px solid rgba(255,79,216,.65);
+      border-left: 14px solid transparent;
+      border-right: 14px solid transparent;
+      border-bottom: 24px solid rgba(255,79,216,.65);
       mix-blend-mode: screen;
       opacity: .55;
       transform: translateX(2px);
@@ -168,7 +179,7 @@
       60% { transform: translateX(3px); opacity: .42; }
     }
 
-    /* ✅ NEW: cyberpunk glitch title */
+    /* cyberpunk glitch title */
     .glitch{
       font-family: "Orbitron", ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, Arial;
       text-transform: uppercase;
@@ -217,17 +228,23 @@
     }
 
     .hero h1{
-      margin: 6px 0 0;
-      font-size: 44px;
+      margin: 4px 0 0;
+
+      /* ✅ smaller title */
+      font-size: 36px;
+
       line-height: 1.05;
       position:relative;
       z-index:1;
     }
 
     .subtitle{
-      margin: 8px 0 6px;
+      margin: 6px 0 6px;
       color: var(--muted);
-      font-size: 18px;
+
+      /* ✅ smaller subtitle */
+      font-size: 16px;
+
       position:relative;
       z-index:1;
     }
@@ -235,7 +252,10 @@
     .divider{
       height: 2px;
       background: linear-gradient(90deg, transparent, rgba(255,79,216,.75), rgba(51,230,255,.75), transparent);
-      margin-top: 18px;
+
+      /* ✅ less vertical space */
+      margin-top: 12px;
+
       border-radius: 999px;
       position:relative;
       z-index:1;
@@ -244,17 +264,18 @@
     /* ====== Sections ====== */
     .content{
       margin-top: 0;
-      width:100%;
 
-      /* ✅ NEW: only content scrolls */
-      margin-top: calc(var(--hdrH) + 26px);
-      height: calc(100vh - var(--hdrH) - var(--ftrH) - 44px);
+      /* ✅ narrower middle content */
+      width: min(var(--contentMax), calc(100vw - (var(--sidePad) * 2)));
+
+      margin-top: calc(var(--hdrH) + 18px);
+      height: calc(100vh - var(--hdrH) - var(--ftrH) - 42px);
       overflow: auto;
       padding-bottom: 22px;
 
-      /* helps scrolling feel nice */
       scroll-behavior: smooth;
       -webkit-overflow-scrolling: touch;
+      box-sizing: border-box;
     }
 
     .part{
@@ -376,7 +397,7 @@
     .bullets, .checklist, .questions{
       margin: 10px auto 12px;
       padding:0;
-      list-style-position: inside; /* ✅ keeps centered look */
+      list-style-position: inside;
       color: var(--text);
       max-width: 760px;
       text-align:center;
@@ -447,14 +468,15 @@
       font-size: 13px;
       opacity:.95;
 
-      /* ✅ NEW: fixed footer */
       position: fixed;
       left: 50%;
       transform: translateX(-50%);
       bottom: 12px;
-      width: min(920px, calc(100vw - (var(--sidePad) * 2)));
-      z-index: 50;
 
+      /* ✅ match new narrower content width */
+      width: min(var(--contentMax), calc(100vw - (var(--sidePad) * 2)));
+
+      z-index: 50;
       padding: 10px 12px;
       border-radius: 999px;
       background: rgba(10, 11, 24, .35);
@@ -468,21 +490,22 @@
       font-weight: 700;
     }
 
-    /* Optional: selection glow */
     ::selection{
       background: rgba(255,79,216,.25);
     }
 
     /* =========================================================
-       ✅ NEW: Copy / Read-Aloud Link + Scrollbox + Copy Button
-       (added exactly per your request)
+       Copy / Read-Aloud Link + Scrollbox + Copy Button
     ========================================================= */
 
     .jumpLink{
       display:inline-flex;
       align-items:center;
       gap:.5rem;
-      padding:.55rem .85rem;
+
+      /* ✅ smaller link button */
+      padding:.48rem .78rem;
+
       border-radius:999px;
       text-decoration:none;
       font-weight:700;
@@ -493,7 +516,11 @@
       box-shadow: 0 0 0 1px rgba(166,107,255,.15) inset, 0 10px 30px rgba(0,0,0,.35);
       position:relative;
       z-index:2;
-      margin-top: 14px;
+
+      /* ✅ less spacing */
+      margin-top: 10px;
+
+      font-size: 13px;
     }
     .jumpLink:hover{
       transform: translateY(-1px);
@@ -555,11 +582,12 @@
       box-shadow: 0 0 0 1px rgba(166,107,255,.12) inset;
       font-family: "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
       font-size: .95rem;
-      text-align:left; /* ✅ keep textarea readable */
-      max-width: 920px;
+      text-align:left;
+      max-width: 100%;
       box-sizing: border-box;
     }
 
+    /* ✅ Copy button now sits ABOVE the textarea */
     .copyRow{
       display:flex;
       align-items:center;
@@ -567,6 +595,7 @@
       gap:.75rem;
       flex-wrap:wrap;
       width:100%;
+      margin-bottom: .25rem;
     }
 
     .btnGlow{
@@ -604,7 +633,7 @@
       <h1 class="glitch" data-text="Fragile Triangle">Fragile Triangle</h1>
       <p class="subtitle"><em>Everyone Was Trying Not to Break</em> 🤫🔺️</p>
 
-      <!-- ✅ NEW: link that scrolls to the copy/read-aloud section -->
+      <!-- link that scrolls to the copy/read-aloud section -->
       <a class="jumpLink" href="#readaloud">📋 Copy / Read Aloud</a>
 
       <div class="divider"></div>
@@ -914,7 +943,7 @@
         </div>
       </section>
 
-      <!-- ✅ NEW: Read-aloud / copy section -->
+      <!-- Read-aloud / copy section -->
       <section id="readaloud" class="readAloud">
         <h2>📋 Read-Aloud / Copy Box</h2>
         <p class="helperText">
@@ -922,6 +951,12 @@
         </p>
 
         <div class="copyPanel">
+          <!-- ✅ MOVED: copy button is now above the textarea -->
+          <div class="copyRow">
+            <button id="copyBtn" class="btnGlow" type="button">✨ Copy Everything</button>
+            <span id="copyStatus" class="copyStatus" aria-live="polite"></span>
+          </div>
+
           <textarea id="essayText" class="essayBox" readonly>SEND THIS BACK TO ME TO READ OUT LOUD (and keep this page open if you want to read along):
 
 "Fragile Triangle
@@ -1171,11 +1206,6 @@ PLAYBACK SHORTCUTS (tell ChatGPT any of these):
 - "The Hard Truth"
 - "The Balancer section" / "The One Who Stayed section" / "The One Who Believed section"
 - "Read it section by section" (it should pause between sections)</textarea>
-
-          <div class="copyRow">
-            <button id="copyBtn" class="btnGlow" type="button">✨ Copy Everything</button>
-            <span id="copyStatus" class="copyStatus" aria-live="polite"></span>
-          </div>
         </div>
       </section>
     </main>
@@ -1185,9 +1215,9 @@ PLAYBACK SHORTCUTS (tell ChatGPT any of these):
     </footer>
   </div>
 
-  <!-- ✅ NEW: script for smooth scroll + copy-to-clipboard -->
+  <!-- script for smooth scroll + copy-to-clipboard -->
   <script>
-    // Smooth scroll for in-page links (now scrolls the content area since header/footer are fixed)
+    // Smooth scroll for in-page links (scrolls the content area since header/footer are fixed)
     document.querySelectorAll('a[href^="#"]').forEach(a => {
       a.addEventListener('click', e => {
         const id = a.getAttribute('href');
@@ -1227,11 +1257,11 @@ PLAYBACK SHORTCUTS (tell ChatGPT any of these):
       }
     });
 
-    // ✅ NEW: measure fixed header/footer so content scroll height stays correct
+    // measure fixed header/footer so content scroll height stays correct
     const header = document.querySelector('.hero');
     const footer = document.getElementById('fixedFooter');
     const setHeights = () => {
-      const hdr = header ? header.getBoundingClientRect().height : 220;
+      const hdr = header ? header.getBoundingClientRect().height : 190;
       const ftr = footer ? footer.getBoundingClientRect().height : 56;
       document.documentElement.style.setProperty('--hdrH', Math.ceil(hdr) + 'px');
       document.documentElement.style.setProperty('--ftrH', Math.ceil(ftr) + 'px');
