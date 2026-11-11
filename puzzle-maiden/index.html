@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="color-scheme" content="dark light">
+  <meta name="theme-color" content="#21112b">
+  <meta name="description" content="The Puzzle Maiden and the Story-Knight: an illustrated interactive fairytale of love, missing stories, and finding your own way forward.">
+  <title>The Puzzle Maiden and the Story-Knight | An Enchanted Book</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ctext y='.86em' font-size='56'%3E%F0%9F%A7%A9%3C/text%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=IM+Fell+English:ital@0;1&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script src="story.js" defer></script>
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <div class="ambient" aria-hidden="true"></div>
+  <header class="chrome-header">
+    <a class="brand" href="#cover" id="brandHome" title="Return to the cover"><span class="brand-icon">☾</span><span>THE PUZZLE MAIDEN <small>&amp; THE STORY-KNIGHT</small></span></a>
+    <div class="header-actions">
+      <button type="button" class="ui-btn" id="contentsToggle" aria-controls="contentsDrawer" aria-expanded="false" title="Table of contents"><span>☰</span><span class="desktop-label">Contents</span></button>
+      <button type="button" class="ui-btn" id="readAloud" aria-pressed="false" title="Read the visible page aloud"><span>◖))</span><span class="desktop-label">Read aloud</span></button>
+      <button type="button" class="ui-btn" id="fontButton" title="Change font size"><span>Aa</span></button>
+    </div>
+  </header>
+
+  <main class="stage" id="main">
+    <div class="eyebrow" id="chapterLabel" aria-live="polite">✦ AN ILLUMINATED FAIRYTALE ✦</div>
+    <section class="book-shell" id="bookShell" aria-label="The interactive book">
+      <div class="book-cover-edge" aria-hidden="true"></div>
+      <div class="book" id="book" aria-live="polite"></div>
+      <div class="spine-glint" aria-hidden="true"></div>
+    </section>
+    <nav class="reader-nav" aria-label="Book page navigation">
+      <button id="previous" class="nav-btn" aria-label="Previous page">❮ <span>Previous</span></button>
+      <div class="reader-progress"><div class="reader-progress__labels"><span id="locationLabel">Cover</span><span id="pageCount">0 / 0</span></div><div class="progress-track"><div id="progressFill" class="progress-fill"></div></div></div>
+      <button id="next" class="nav-btn" aria-label="Next page"><span>Next</span> ❯</button>
+    </nav>
+    <p class="reader-hint">Use the arrow keys to turn pages · Your reading position is saved on this device</p>
+  </main>
+
+  <aside class="drawer" id="contentsDrawer" role="dialog" aria-label="Table of contents" aria-modal="true" aria-hidden="true">
+    <div class="drawer__inner">
+      <div class="drawer__head"><p>✧ THE INDEX ✧</p><button type="button" id="closeDrawer" aria-label="Close table of contents">✕</button></div>
+      <h2>Table of<br><em>Contents</em></h2>
+      <nav id="drawerLinks" class="drawer-links" aria-label="Chapters"></nav>
+      <p class="drawer-foot">☾ Some stories arrive unfinished. Others arrive with pieces someone never meant you to find. ☽</p>
+    </div>
+  </aside>
+  <div class="veil" id="veil" hidden></div>
+  <footer class="footer">☾ MIDNIGHT TRICKSTER TAPESTRY · AN ORIGINAL ENCHANTED TALE ☽</footer>
+</body>
+</html>
