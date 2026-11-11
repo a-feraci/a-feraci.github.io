@@ -1348,9 +1348,9 @@ They were not missing pieces. They were places where life had not happened yet.
 **And that was not a mystery to solve. It was a story still waiting to be lived.**`}
 ],
  finale:[
- {title:'The Clock',image:'06_finale_clock.webp',quote:'The distance was not between kingdoms. It was between promise and practice.'},
- {title:'The Transparent House',image:'07_finale_transparent_house.webp',quote:'She stopped believing the dream belonged to only one possible story.'},
- {title:'The Moon-Bunny Piece',image:'08_finale_moon_bunny_piece.webp',quote:'Not certainty. Not victory. Understanding herself.'},
- {title:'The Open Road',image:'09_finale_open_road.webp',quote:'They were not missing pieces. They were places where life had not happened yet.'}
+ {title:'The Clock',image:'06_finale_clock-full.webp',quote:'The distance was not between kingdoms. It was between promise and practice.'},
+ {title:'The Transparent House',image:'07_finale_transparent_house-full.webp',quote:'She stopped believing the dream belonged to only one possible story.'},
+ {title:'The Moon-Bunny Piece',image:'08_finale_moon_bunny_piece-full.webp',quote:'Not certainty. Not victory. Understanding herself.'},
+ {title:'The Open Road',image:'09_finale_open_road-full.webp',quote:'They were not missing pieces. They were places where life had not happened yet.'}
  ]
 };

@@ -18,4 +18,6 @@ Copy the contents of this folder to the `puzzle-maiden/` folder in `a-feraci/a-f
 
 ## Features
 
-Cover/back cover, parchment spreads, contents navigation, illustrated chapters, four finale scenes in story order, characters and lore, page arrows and keyboard navigation, read aloud using browser speech synthesis, and locally saved reading progress.
+Cover/back cover, parchment spreads, contents navigation, illustrated chapters, four finale scenes in story order, characters and lore, page arrows and keyboard navigation, enlargeable full-size illustrations, adjustable text, shared page links, and locally saved reading progress.
+
+The four finale images appear at their manuscript anchors in the order Clock, Transparent House, Moon-Bunny Piece, Open Road. Their full-size artwork was supplied by the author. The five chapter texts are preserved from the existing manuscript. Read-aloud is deferred.
