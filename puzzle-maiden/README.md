@@ -30,3 +30,10 @@ The header and book fit the viewport. Navigation and progress overlay the bindin
 Illustrated leaves fill the page without duplicate captions. Select any illustration for its uncropped view, then zoom from 100% to 400% and scroll to explore.
 
 `assets/moonlit-garden.wav` is an original 53-second looping instrumental composed for this reader, with harp, bell and sustained tones. `assets/page-turn.wav` is an original synthesized paper rustle. Music starts only after pressing its toolbar button and does not auto-resume on reload.
+
+
+## Illustrated palettes and bookmarks
+
+Each preset now selects its own illustrated page-spread image: candlelight, daylight, midnight, rose, woodland (sage), and moonflower (lavender). The writing area is transparent enough to show the page texture. Settings include a fixed live book preview and an editable sample sharing the reader's font, size, and ink color. The original book/frame dimensions remain unchanged.
+
+The ribbon at the book's upper-right corner adds or removes a bookmark. Contents lists saved pages with individual removal controls. Bookmarks persist in browser storage on this device and restore the page plus relative text scroll position. If storage is unavailable, they remain usable for the current visit. Background stars respect reduced-motion preferences. Image-generation prompts are recorded in PAGE_ART.md.

@@ -70,6 +70,23 @@
   const findIndex=id=>id==='cover'?0:(pageMap.get(id)??pages.findIndex(p=>p.id===id));
   const readSetting=(key,fallback)=>{try{return localStorage.getItem(key)??fallback;}catch{return fallback;}};
   const saveSetting=(key,value)=>{try{localStorage.setItem(key,value);}catch{/* Reading still works without browser storage. */}};
+  let bookmarks=[];
+  try{const saved=JSON.parse(readSetting('puzzle-maiden-bookmarks','[]'));if(Array.isArray(saved))bookmarks=saved.filter(b=>b&&typeof b.id==='string'&&typeof b.title==='string'&&Array.isArray(b.scroll)).slice(0,100);}catch{}
+  function storeBookmarks(){try{localStorage.setItem('puzzle-maiden-bookmarks',JSON.stringify(bookmarks));}catch{document.getElementById('bookmarkStorageNote').textContent='Browser storage is unavailable. Bookmarks will last for this visit.';}}
+  function syncBookmarks(){
+    const marked=bookmarks.some(b=>b.id===pageHash(index)),button=document.getElementById('bookmarkButton');
+    button.setAttribute('aria-pressed',String(marked));button.setAttribute('aria-label',marked?'Remove bookmark for this page':'Bookmark this page');button.title=marked?'Remove this bookmark':'Bookmark this page';button.textContent=marked?'★':'✧';
+    document.getElementById('bookmarkList').innerHTML=bookmarks.length?bookmarks.map(b=>`<div class="bookmark-item"><button data-bookmark="${esc(b.id)}"><span>${esc(b.title)}</span><small>Leaf ${esc(b.leaf)}</small></button><button data-remove-bookmark="${esc(b.id)}" aria-label="Remove bookmark: ${esc(b.title)}">✕</button></div>`).join(''):'<p class="bookmark-help">Your saved pages will appear here.</p>';
+  }
+  function saveBookmark(){
+    const id=pageHash(index),existing=bookmarks.findIndex(b=>b.id===id);
+    if(existing>=0){bookmarks.splice(existing,1);document.getElementById('bookmarkStatus').textContent='Bookmark removed.';}
+    else{
+      const scroll=[...root.querySelectorAll('.prose,.toc-on-page')].map(n=>n.scrollTop/Math.max(1,n.scrollHeight-n.clientHeight));
+      bookmarks.push({id,title:pages[index].title,leaf:index+1,scroll});document.getElementById('bookmarkStatus').textContent='Page bookmarked. Find it in Contents.';
+    }
+    storeBookmarks();syncBookmarks();
+  }
   const stored=Number(readSetting('puzzle-maiden-page','0'));
   let index=Number.isInteger(stored)&&stored>=0&&stored<pages.length?stored:0;
   const isMobile=()=>window.matchMedia('(max-width:900px)').matches;
@@ -110,6 +127,7 @@
     document.getElementById('progressTrack').setAttribute('aria-valuenow',String(Math.round(index/(pages.length-1)*100)));
     saveSetting('puzzle-maiden-page',String(index));
     history.replaceState(null,'',`#${pageHash(index)}`);
+    syncBookmarks();
   }
   function goto(n){if(n<0)return;const before=index;index=clamp(n);closeDrawer();render();if(index!==before)window.Reader?.turn(index-before);}
   function gotoId(id){goto(findIndex(id));}
@@ -146,6 +164,14 @@
   const toggle=document.getElementById('contentsToggle');
   function openDrawer(){drawer.classList.add('open');drawer.inert=false;drawer.setAttribute('aria-hidden','false');veil.hidden=false;toggle.setAttribute('aria-expanded','true');document.getElementById('closeDrawer').focus();}
   function closeDrawer(){const wasOpen=drawer.classList.contains('open');drawer.classList.remove('open');drawer.inert=true;drawer.setAttribute('aria-hidden','true');veil.hidden=true;toggle.setAttribute('aria-expanded','false');if(wasOpen)toggle.focus();}
+  document.getElementById('bookmarkButton').onclick=saveBookmark;
+  document.getElementById('bookmarkList').onclick=e=>{
+    const remove=e.target.closest('[data-remove-bookmark]');if(remove){bookmarks=bookmarks.filter(b=>b.id!==remove.dataset.removeBookmark);storeBookmarks();syncBookmarks();return;}
+    const link=e.target.closest('[data-bookmark]');if(!link)return;
+    const bookmark=bookmarks.find(b=>b.id===link.dataset.bookmark);if(!bookmark)return;
+    const target=pages.findIndex((p,n)=>pageHash(n)===bookmark.id);if(target<0)return;
+    goto(target);requestAnimationFrame(()=>root.querySelectorAll('.prose,.toc-on-page').forEach((n,j)=>{const ratio=Math.max(0,Math.min(1,Number(bookmark.scroll[j])||0));n.scrollTop=ratio*Math.max(0,n.scrollHeight-n.clientHeight);}));
+  };
   toggle.onclick=openDrawer;document.getElementById('closeDrawer').onclick=closeDrawer;veil.onclick=closeDrawer;
   document.getElementById('drawerLinks').innerHTML=`<button data-goto="cover">❦ <span>Front Cover</span></button><button data-goto="frontispiece">✧ <span>Frontispiece & Contents</span></button>${BOOK.chapters.map(c=>`<button data-chapter="${c.id}">✧ <span>Part ${c.number} · ${esc(c.title)}</span></button>`).join('')}${BOOK.finale.map(f=>`<button data-goto="finale-${f.title.toLowerCase().replaceAll(' ','-')}">☾ <span>${esc(f.title)}</span></button>`).join('')}<button data-goto="characters">♧ <span>Character Folio</span></button><button data-goto="lore">✦ <span>World Lore</span></button><button data-goto="back">❦ <span>Back Cover</span></button>`;
   document.getElementById('drawerLinks').onclick=e=>{const t=e.target.closest('[data-chapter],[data-goto]');if(t)gotoId(t.dataset.chapter||t.dataset.goto);};
