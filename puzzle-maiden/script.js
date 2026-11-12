@@ -40,7 +40,8 @@
   for(const chapter of BOOK.chapters){
     pageMap.set(chapter.id,pages.length);
     pages.push({type:'chapter-art',chapter:chapter.id,number:chapter.number,title:chapter.title,image:chapter.art});
-    const addText=(body)=>{const chunks=groupBlocks(body);chunks.forEach((blocks,n)=>pages.push({type:'text',chapter:chapter.id,number:chapter.number,title:chapter.title,blocks,part:n+1,of:chunks.length}));};
+    let leaf=0;
+    const addText=(body)=>{const chunks=groupBlocks(body);chunks.forEach((blocks,n)=>pages.push({type:'text',chapter:chapter.id,number:chapter.number,title:chapter.title,blocks,id:`leaf-${chapter.id}-${++leaf}`,part:n+1,of:chunks.length}));};
     if(chapter.id!=='v'){addText(chapter.body);continue;}
     // Preserve the exact finale order at the narrative moments where each symbol resolves.
     const anchors=[
@@ -63,15 +64,30 @@
     const road=BOOK.finale[3];
     pages.push({type:'finale',chapter:'v',number:'V',title:road.title,image:road.image,quote:road.quote,id:'finale-the-open-road'});
   }
+  for(const chapter of BOOK.chapters){
+    const leaves=pages.filter(p=>p.type==='text'&&p.chapter===chapter.id);
+    leaves.forEach((page,n)=>{page.part=n+1;page.of=leaves.length;});
+  }
   pages.push({type:'character',id:'characters',title:'The Puzzle Maiden',image:'character-maiden.webp'});
-  pages.push({type:'character',title:'The Story-Knight',image:'character-knight.webp'});
+  pages.push({type:'character',id:'character-knight',title:'The Story-Knight',image:'character-knight.webp'});
   pages.push({type:'lore',id:'lore',title:'The Laws of the Puzzle'});
   pages.push({type:'back',id:'back',title:'Back Cover'});
-  const findIndex=id=>id==='cover'?0:(pageMap.get(id)??pages.findIndex(p=>p.id===id));
+  const findIndex=id=>typeof id!=='string'?-1:id==='cover'?0:(pageMap.get(id)??pages.findIndex(p=>p.id===id));
   const readSetting=(key,fallback)=>{try{return localStorage.getItem(key)??fallback;}catch{return fallback;}};
   const saveSetting=(key,value)=>{try{localStorage.setItem(key,value);}catch{/* Reading still works without browser storage. */}};
+  // Older editions used absolute page numbers. Carry those to the matching
+  // passage (or the nearest position in its chapter when it was rewritten).
+  const legacyPosition=id=>/^page-\d+$/.test(id)?BOOK.legacyPositions?.[Number(id.slice(5))-1]:null;
   let bookmarks=[];
   try{const saved=JSON.parse(readSetting('puzzle-maiden-bookmarks','[]'));if(Array.isArray(saved))bookmarks=saved.filter(b=>b&&typeof b.id==='string'&&typeof b.title==='string'&&Array.isArray(b.scroll)).slice(0,100);}catch{}
+  const migratedBookmarks=new Map();
+  for(const bookmark of bookmarks){
+    const migrated=legacyPosition(bookmark.id),id=migrated?.id||bookmark.id,target=findIndex(id);
+    if(target<0)continue;
+    migratedBookmarks.set(id,{...bookmark,id,title:pages[target].title,leaf:target+1,scroll:migrated&&!migrated.exact?[]:bookmark.scroll});
+  }
+  bookmarks=[...migratedBookmarks.values()];
+  saveSetting('puzzle-maiden-bookmarks',JSON.stringify(bookmarks));
   function storeBookmarks(){try{localStorage.setItem('puzzle-maiden-bookmarks',JSON.stringify(bookmarks));}catch{document.getElementById('bookmarkStorageNote').textContent='Browser storage is unavailable. Bookmarks will last for this visit.';}}
   function syncBookmarks(){
     const marked=bookmarks.some(b=>b.id===pageHash(index)),button=document.getElementById('bookmarkButton');
@@ -88,7 +104,9 @@
     storeBookmarks();syncBookmarks();
   }
   const stored=Number(readSetting('puzzle-maiden-page','0'));
-  let index=Number.isInteger(stored)&&stored>=0&&stored<pages.length?stored:0;
+  const savedLocation=findIndex(readSetting('puzzle-maiden-location',''));
+  const migratedLocation=readSetting('puzzle-maiden-edition','')!==BOOK.edition&&Number.isInteger(stored)?findIndex(BOOK.legacyPositions?.[stored]?.id):-1;
+  let index=savedLocation>=0?savedLocation:migratedLocation>=0?migratedLocation:Number.isInteger(stored)&&stored>=0&&stored<pages.length?stored:0;
   const isMobile=()=>window.matchMedia('(max-width:900px)').matches;
   const clamp=n=>Math.max(0,Math.min(pages.length-1,n));
   const spreadStart=n=>n===0||n===pages.length-1||isMobile()?n:1+Math.floor((n-1)/2)*2;
@@ -107,11 +125,11 @@
       return `<article class="page ${side} art-page"><div class="page-inner"><img class="zoomable" src="assets/${esc(file)}" alt="${esc(page.title)}" role="button" tabindex="0" aria-label="Enlarge illustration: ${esc(page.title)}"></div></article>`;
     }
     if(page.type==='text')return `<article class="page ${side}"><div class="page-inner"><div class="page-top">✧ PART ${page.number} · ${esc(page.title)} ✧</div><div class="prose" tabindex="0" aria-label="Story text; scroll to read this leaf">${prose(page.blocks)}</div>${bottom}</div></article>`;
-    if(page.type==='lore')return `<article class="page ${side} lore"><div class="page-inner"><div class="page-top">THE ENCHANTED WORLD</div><h2 class="page-title">Laws of the Puzzle</h2><div class="prose" tabindex="0"><p><strong>Every life is a living puzzle.</strong> Events leave pieces behind, beautiful or painful. True pieces carry the crests of those who shaped them.</p><p><strong>Stories gather related pieces.</strong> An unfolding story may be unfinished. A story presented as complete while its known middle is concealed cannot be understood honestly.</p><p><strong>Dream-pieces are translucent.</strong> They represent hoped-for futures. They become solid through deeds.</p><p><strong>The clock has two hands.</strong> Gold advances with promises; silver advances when promises are met by action.</p><p><strong>The moon-bunny crest</strong> marks the Maiden’s own pieces: curiosity, self-knowledge, and the freedom to choose what comes next.</p><p><strong>The Trickster is also the Knight.</strong> Understanding his wound does not erase responsibility for the blade.</p><p><strong>Empty spaces</strong> may be places where life has not happened yet.</p></div>${bottom}</div></article>`;
+    if(page.type==='lore')return `<article class="page ${side} lore"><div class="page-inner"><div class="page-top">THE ENCHANTED WORLD</div><h2 class="page-title">Laws of the Puzzle</h2><div class="prose" tabindex="0"><p><strong>Every life is a living puzzle.</strong> Events leave pieces behind, beautiful or painful. True pieces carry the crests of those who shaped them.</p><p><strong>Stories gather related pieces.</strong> An unfolding story may be unfinished. A story presented as complete while its known middle is concealed cannot be understood honestly.</p><p><strong>Dream-pieces are translucent.</strong> They represent hoped-for futures. They become solid through deeds.</p><p><strong>The clock has two hands.</strong> Gold advances with promises; silver advances when promises are met by action.</p><p><strong>The moon-bunny crest</strong> marks the Maiden’s own pieces: curiosity, self-knowledge, and the freedom to choose what comes next.</p><p><strong>Old wounds can leak into new pieces.</strong> Their colors may explain a pattern without excusing a fresh cut.</p><p><strong>Masks and armor</strong> may share a shadow. Understanding the wound does not erase responsibility for the blade.</p><p><strong>Boundaries filter what may enter.</strong> A keeper can welcome closeness while refusing lies, cruelty, and repeated harm.</p><p><strong>Empty spaces</strong> may be places where life has not happened yet.</p></div>${bottom}</div></article>`;
     return '';
   }
   function pageHash(n){return pages[n].id||(pages[n].type==='chapter-art'?pages[n].chapter:`page-${n+1}`);}
-  function parseHash(){const id=decodeURIComponent(location.hash.slice(1));if(/^page-\d+$/.test(id)){const n=Number(id.slice(5))-1;return n>=0&&n<pages.length?n:-1;}return findIndex(id);}
+  function parseHash(){let id;try{id=decodeURIComponent(location.hash.slice(1));}catch{return -1;}const migrated=legacyPosition(id);return findIndex(migrated?.id||id);}
   function render(){
     index=clamp(index);
     const cover=['cover','back'].includes(pages[index].type),start=spreadStart(index);
@@ -126,6 +144,8 @@
     progressFill.style.width=`${Math.round(index/(pages.length-1)*100)}%`;
     document.getElementById('progressTrack').setAttribute('aria-valuenow',String(Math.round(index/(pages.length-1)*100)));
     saveSetting('puzzle-maiden-page',String(index));
+    saveSetting('puzzle-maiden-location',pageHash(index));
+    saveSetting('puzzle-maiden-edition',BOOK.edition);
     history.replaceState(null,'',`#${pageHash(index)}`);
     syncBookmarks();
   }

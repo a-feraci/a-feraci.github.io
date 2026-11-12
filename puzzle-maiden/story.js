@@ -1,196 +1,288 @@
-/* The Puzzle Maiden and the Story-Knight — literary manuscript, adapted for illustrated reading pages. */
+/* The Puzzle Maiden and the Story-Knight — revised illustrated manuscript. */
 window.BOOK = {
- title:'The Puzzle Maiden and the Story-Knight',
- subtitle:'A cautionary tale of unfinished stories, borrowed armor, and the pieces we mistake for promises.',
- chapters:[
- {id:'i',number:'I', title:'The Stories We Let Touch Our Own', art:'01_part_i_living_puzzle.webp', body:`
-Long ago, in a kingdom where every life was recorded in an enchanted puzzle, there lived a maiden with an extraordinary gift for finding patterns.
+  "title": "The Puzzle Maiden and the Story-Knight",
+  "subtitle": "A cautionary tale of unfinished stories, borrowed armor, and the pieces we mistake for promises.",
+  "finale": [
+    {
+      "title": "The Clock",
+      "image": "06_finale_clock-full.webp",
+      "quote": "The distance was not between kingdoms. It was between promise and practice."
+    },
+    {
+      "title": "The Transparent House",
+      "image": "07_finale_transparent_house-full.webp",
+      "quote": "She stopped believing the dream belonged to only one possible story."
+    },
+    {
+      "title": "The Moon-Bunny Piece",
+      "image": "08_finale_moon_bunny_piece-full.webp",
+      "quote": "Not certainty. Not victory. Understanding herself."
+    },
+    {
+      "title": "The Open Road",
+      "image": "09_finale_open_road-full.webp",
+      "quote": "They were not missing pieces. They were places where life had not happened yet."
+    }
+  ],
+  "edition": "2026-11-12-story-revision"
+,
+  "legacyPositions": [{"id":"cover","exact":true},{"id":"frontispiece","exact":true},{"id":"contents","exact":true},{"id":"i","exact":true},{"id":"leaf-i-3","exact":false},{"id":"leaf-i-2","exact":false},{"id":"leaf-i-3","exact":false},{"id":"leaf-i-4","exact":false},{"id":"leaf-i-5","exact":false},{"id":"leaf-i-7","exact":false},{"id":"leaf-i-8","exact":false},{"id":"leaf-i-9","exact":false},{"id":"leaf-i-10","exact":false},{"id":"leaf-i-11","exact":false},{"id":"leaf-i-12","exact":false},{"id":"ii","exact":true},{"id":"leaf-ii-1","exact":false},{"id":"leaf-ii-2","exact":false},{"id":"leaf-ii-7","exact":false},{"id":"leaf-ii-4","exact":false},{"id":"leaf-ii-5","exact":false},{"id":"leaf-ii-6","exact":false},{"id":"leaf-ii-5","exact":false},{"id":"leaf-ii-8","exact":false},{"id":"leaf-ii-9","exact":false},{"id":"leaf-ii-10","exact":false},{"id":"iii","exact":true},{"id":"leaf-iii-1","exact":false},{"id":"leaf-iii-3","exact":true},{"id":"leaf-iii-4","exact":true},{"id":"leaf-iii-5","exact":true},{"id":"leaf-iii-6","exact":false},{"id":"leaf-iii-7","exact":false},{"id":"leaf-iii-8","exact":false},{"id":"leaf-iii-9","exact":false},{"id":"leaf-iii-11","exact":false},{"id":"leaf-iii-13","exact":false},{"id":"leaf-iii-14","exact":false},{"id":"leaf-iii-15","exact":false},{"id":"leaf-iii-16","exact":false},{"id":"iv","exact":true},{"id":"leaf-iv-1","exact":false},{"id":"leaf-iv-2","exact":false},{"id":"leaf-iv-2","exact":false},{"id":"leaf-iv-3","exact":false},{"id":"leaf-iv-10","exact":false},{"id":"leaf-iv-11","exact":false},{"id":"leaf-iv-13","exact":false},{"id":"leaf-iv-11","exact":false},{"id":"leaf-iv-13","exact":false},{"id":"leaf-iv-15","exact":false},{"id":"leaf-iv-16","exact":false},{"id":"leaf-iv-18","exact":false},{"id":"leaf-iv-19","exact":false},{"id":"v","exact":true},{"id":"leaf-v-1","exact":true},{"id":"leaf-v-2","exact":false},{"id":"leaf-v-3","exact":false},{"id":"leaf-v-4","exact":false},{"id":"leaf-v-5","exact":false},{"id":"finale-the-clock","exact":true},{"id":"leaf-v-6","exact":false},{"id":"leaf-v-7","exact":false},{"id":"leaf-v-8","exact":false},{"id":"leaf-v-9","exact":true},{"id":"leaf-v-10","exact":true},{"id":"leaf-v-11","exact":false},{"id":"leaf-v-12","exact":false},{"id":"leaf-v-13","exact":true},{"id":"leaf-v-15","exact":false},{"id":"finale-the-transparent-house","exact":true},{"id":"leaf-v-16","exact":false},{"id":"finale-the-moon-bunny-piece","exact":true},{"id":"leaf-v-18","exact":false},{"id":"leaf-v-18","exact":false},{"id":"leaf-v-20","exact":false},{"id":"leaf-v-21","exact":false},{"id":"finale-the-open-road","exact":true},{"id":"characters","exact":true},{"id":"character-knight","exact":true},{"id":"lore","exact":true},{"id":"back","exact":true}],
+  "chapters": [
+{"id": "i", "number": "I", "title": "The Stories We Let Touch Our Own", "art": "01_part_i_living_puzzle.webp", "body": `
+Long ago, in the country some called the puzzleverse, no life could be laid flat and read from beginning to end.
 
-Each happening left behind a piece.
+Each person kept an enchanted puzzle. Each happening left a piece.
 
-A friendship. A journey. A kindness. A promise kept. A promise broken. A lesson learned too late.
+A friendship. A small invention. A kindness. A promise kept. A promise broken. A lesson whose meaning arrived years after its cost.
 
-Some pieces gleamed like polished jewels. Others were dull and ordinary. Some were so dark that, even after many years, their edges remained painful to touch.
+No two pictures were alike. One might open upon a harbor; another, a forest. A garden could grow beside a workshop. A road might disappear beneath a childhood room and emerge, much later, at the sea.
+
+The pictures changed as their keepers lived. They were not supposed to be finished.
+
+The Puzzle Maiden loved them for that.
+
+She loved a curious corner. A color returning where she had not expected it. The patient little conversation between an edge and the space beside it.
+
+And she was very good at listening.
+
+---
+
+Once, a friend's late arrival had left three pieces upon her table: a lantern at the gate, a rain-swollen river, and a traveler safely home.
+
+The lantern belonged. The homecoming belonged. But the road between them remained broken.
+
+Then a small piece arrived, showing a boat.
+
+The Maiden noticed the lantern's reflection upon its water. A silver line continued from one edge to another. She turned the little boat once, then again, following the pattern rather than forcing it.
+
+There.
+
+It settled between the river and the waiting light.
+
+*Click.*
+
+A tiny sound. Almost nothing. Yet she felt it beneath her fingers: no bent corner, no hidden overlap, no need to hold the picture down to keep it whole.
+
+*Ah. The bridge had flooded. That was why he was late.*
+
+The question loosened. The little story rested. Beside it, another road was free to grow.
+
+How she loved that sound.
+
+Not the triumph of being right. The relief of things making sense without having to injure them first.
+
+---
+
+A story did not have to be complete before its pieces belonged upon a board.
+
+A beginning could wait beside an unknown middle. A journey could stretch beyond the edge of all that had happened yet. There was nothing false about an honest empty space.
+
+But when the rest of a little story arrived, its true pieces joined cleanly. Their roads connected to neighboring roads. Their colors carried into other days.
+
+A dark ending could fit as truly as a golden one.
+
+The Maiden did not need every story to please her. She wanted to know which story she was living.
 
 On the reverse of each true piece glowed the crests of those whose actions had shaped it.
 
-The Maiden's crest was a little silver moon-bunny, curled beneath a crescent moon.
+Hers was a silver moon-bunny beneath a crescent moon.
 
-No one knew where the symbol had come from. Some believed such crests were blessings bestowed at birth. Others said that every soul chose its own mark before entering the world.
+Some said such marks were bestowed at birth. Others believed a soul chose its own before entering the world.
 
-The Maiden liked the latter explanation. She had always preferred a little mystery.
+The Maiden preferred the second explanation. She had always liked to think curiosity might be a choice.
 
-And she adored puzzles. Not because she needed to know how every story would end. Quite the opposite.
+---
 
-She loved watching a picture reveal itself. The first curious corner. The familiar color. The shape that belonged somewhere, though its place was not yet known.
+The puzzleverse had other laws. Less charming ones.
 
-And, most of all, that tiny, glorious sound when the last piece of a little story slipped into place.
+When lives drew close, their pieces could touch. A friend's kindness might click into a corner one had thought would always remain cold. A stranger's cruelty might leave a stain that traveled farther than the stranger ever would.
+
+A lover's story could bleed into one's own until an entire landscape changed.
+
+Two people did not become one picture simply because they loved each other. Yet a shared piece could bear both crests. A choice made upon one board could leave its consequence upon another.
+
+And darkness did not always remain where it first appeared.
+
+Sometimes an old piece leaked into a new one. Sometimes a keeper reached toward an ordinary absence and felt every disappearance that had come before.
+
+Sometimes the missing piece was merely late.
+
+Sometimes someone knew exactly where it was.
+
+These were different mysteries. The empty spaces could look terribly alike.
+
+---
+
+By the time this tale begins, the Maiden had learned caution from more than one pair of hands.
+
+Friends had disappointed her. Loves had wounded her. People she trusted had left stories upon her board whose sharpness she discovered only after drawing them close.
+
+She had made dark pieces too. Carelessness. Anger. Choices she would not make again.
+
+Life was already difficult. Duties crowded her days. Old hurts disturbed her sleep. Some nights she lay awake; on others she rose and worked by candlelight.
+
+But those hours had belonged to her own making.
+
+Her studies. Her paints. The little machines she wished to understand and build. Books with difficult passages. Problems whose answers did not punish her for looking.
+
+She was tired before the Knight returned.
+
+She was not yet spending her nights trying to assemble him.
+
+---
+
+In a kingdom beyond the wildwood lived a man called the Story-Knight.
+
+He wore his adventures magnificently.
+
+There was always some unlikely journey, some narrow escape, some marvel he had seen where no ordinary traveler thought to look. He could make a dull afternoon shine. He could make a room lean toward him.
+
+When he was young, not all his tales had clicked quite neatly together.
+
+A road would change between tellings. A middle would grow misty. The ending, somehow, would always know how to flatter its teller.
+
+The Maiden had known him then.
+
+Nearly two decades before, he had courted her. They had been young, though not equally young; she had only just stepped beyond girlhood. There had been laughter, affection, and pieces she remembered warmly.
+
+There had also been a trickster's glimmer she had not quite known how to name.
+
+Their courtship ended. Other years covered it. Some memories survived. Others disappeared beneath dust.
+
+Then, without warning, his letters began arriving again.
+
+---
+
+He wrote from beyond the wildwood as though some old chapter had remained open all this time.
+
+He remembered her laughter. He missed her. He spoke of a heart that had never belonged quite so completely to another.
+
+The Maiden read carefully.
+
+An old affection was not the same as a new reason to trust. And he was not the only person who had taught her why trust required care.
+
+So she kept his pieces at the border of her board.
+
+He wrote again. He crossed the wildwood. He arrived when he said he would. They laughed. They wandered strange towns. They made memories. He returned home.
+
+Spoken. Done. A small story with its middle still inside it.
 
 *Click.*
 
-*Ah. So that is what happened.*
+The Knight remained. His pieces came nearer.
 
-A story need not end happily to make sense. Its pieces might be dark, its ending cruel, its lesson difficult.
+He spoke of destiny. Of finding his missing piece. Of a love that had survived the years.
 
-But a true story had a shape. A beginning. A middle. An end.
-
-And when enough of its pieces had arrived, one could usually trace the road between them.
-
-The Maiden did not demand every piece of tomorrow. She only knew the difference between a story still unfolding and one whose ending had been presented while its middle remained concealed.
+Slowly, she allowed his stories to affect her picture. His hopes to touch hers. His future to rest beside the things she already dreamed of building.
 
 ---
 
-As she grew older, the Maiden learned another curious law of puzzles.
+One evening he spoke of what might have been.
 
-No two lives were ever quite the same picture. Yet when people met, their stories touched.
+“I wish we had married,” he told her. “Lived together. Had a child. We might have had all of it.”
 
-A friend's kindness might leave a golden piece upon her board. A stranger's cruelty might leave one dark enough to stain its neighbors. A lover's choices could alter entire corners of a life.
+The Maiden listened.
 
-Two puzzles did not become one simply because their owners fell in love. But their edges might meet.
+“I cannot do those things now,” he added, as though the life he described belonged only to the young people they had ceased to be.
 
-And once another person's pieces had settled beside one's own, removing their influence was not always so simple.
+She turned toward the translucent pieces beside her board.
 
-Thus the Maiden became fiercely guarded about whose hands she permitted near her board. She had learned that beautiful pieces could be dangerous when they belonged to the wrong picture.
+A little house. A garden. A ring. A family table. Two chairs beneath flowering vines.
 
----
+They had been hers before his letters. They were beautiful, but not yet heavy enough to settle into the living picture.
 
-Then, after nearly two decades apart, the Story-Knight returned.
+Dream-pieces. Possibilities, not happenings.
 
-He came from a distant kingdom beyond the wildwood, where the road was long and winding, and where many moons might pass before two people could meet beneath the same sky.
+“I still want these,” she said. “And someone who wants them upon his own board. Someone who will help me give them weight.”
 
-Most days he reached her through letters. His words were charming. His stories were clever. His laughter was familiar.
+Beside them stood an enchanted clock. Its golden hand advanced with promises. Its silver hand advanced when promises were met by action.
 
-And he spoke of loving her as though some ancient chapter had never truly ended.
+A kept visit could move the silver. A declared intention could move the gold. Neither hand could be persuaded by the beauty of a speech.
 
-At first, the Maiden was cautious. She had known him when they were young, and not every old piece had been kind.
+The clock measured no appointed ending. It showed the distance between what had been promised and what had been built.
 
-She turned his new stories over. Examined their edges. Kept them apart from her own.
+“The wildwood makes a long road,” she told him. “I know that. I do not need the house tomorrow. But I will not sit beside these pieces forever while nothing brings them nearer.”
 
-But the Knight was patient. And the pieces he brought seemed true.
+The Knight took her hand.
 
-He missed her. He crossed the wildwood. He arrived. They laughed. They wandered strange towns. They made memories. He returned home.
+“I want them too,” he said. “Not only then. Now. With you.”
 
-Beginning. Middle. End.
+The golden hand stirred.
 
-*Click.*
-
-How lovely it was to hear that sound again.
+“Then watch what I build.”
 
 ---
 
-The Knight spoke often of the future. A little house. A garden. A ring. A family table. Two chairs beneath flowering vines.
+And at last she turned toward him without fear.
 
-A life where neither distance nor difficult questions would send love fleeing into the forest.
+She loved him openly. Fiercely.
 
-The Maiden fashioned translucent pieces from those dreams and placed them beside her board. They were beautiful, but they could not yet settle into the puzzle.
+She wanted the house. The garden. The family table. The life they had named together.
 
-Dreams were not deeds. Not until life gave them weight.
+There was room upon her board. She had made it with such care.
 
-Beside the puzzle stood an enchanted clock. It had two hands.
+For a little while, his small kept promises continued to arrive. The silver hand followed where it could.
 
-The golden hand advanced with promises. The silver hand advanced when those promises were met by action.
+Then the pieces changed.
 
-The clock did not foretell the future or count down to some appointed ending. It simply made visible the distance between what was spoken and what was built.
+A colder answer. A silence where warmth had been. Something heavy placed among the bright beginnings.
 
-“I do not fear waiting,” the Maiden told him. “I only fear waiting where nothing moves.”
+The Maiden lifted it.
 
-The Knight took her hand. “Then watch what I build.”
+“This is hurting me,” she told him. “It is different from what you gave me before.”
 
-And in those early days, the silver hand followed the gold.
+The Knight glanced at the board.
 
-The Maiden smiled. *There. I can see where this is going.*
+“You make too much of things,” he said.
 
----
-
-Yet the Knight did not dwell alone in his distant kingdom. He shared an old house with another maiden and their child.
-
-Of that household, he told a simple story. An old love long extinguished. A shared roof. A shared duty. A chapter ended, though the house remained.
-
-The Puzzle Maiden listened and accepted the pieces he offered. Why should she not? His earlier stories had clicked.
-
-But soon peculiar fragments began arriving.
-
-The Knight said the Old Maiden knew of their love. Yet another piece showed him concealing the Puzzle Maiden from view.
-
-He said the Old Maiden cared little where he traveled. Yet another showed fury whenever he crossed the wildwood.
-
-He said no romance remained beneath that roof. Yet the Old Maiden's words seemed to describe another story entirely.
-
-The Puzzle Maiden did not immediately accuse him of falsehood. Perhaps the Old Maiden misunderstood. Perhaps the Knight had explained himself poorly. Perhaps some piece had simply not arrived.
-
-Stories could be complicated. She knew that better than anyone.
-
-But the Knight began handing her endings without beginnings. Answers without explanations. Pictures with their middles cut away.
-
-When she asked how one piece could lead to another, he shrugged.
-
-“I do not know.”
-
-Or: “That is simply how she is.”
-
-Or: “She has lost her senses.”
-
-Or: “You think too much.”
-
-So the Maiden began imagining the missing pieces.
-
-Perhaps the Old Maiden knew, but not everything. Perhaps the Knight feared her temper. Perhaps the child complicated his departure. Perhaps some rule of the house had gone unspoken.
-
-She carried these ghostly pieces to him. “Was it something like this?”
-
-Sometimes he laughed. Sometimes he kissed her forehead. Sometimes he said no.
-
-And sometimes, when she guessed close enough, he reached beneath his cloak and produced the very piece she had imagined.
-
-*Click.* Perfect.
-
-The Maiden should have been delighted. Instead, her stomach sank.
-
-For she had found the shape she feared. And the Knight had possessed it all along.
+She set the piece beside the gold. The difference remained.
 
 ---
 
-Then she noticed something stranger. She was not merely skilled at recognizing patterns that belonged together. She could recognize patterns in the things that did not.
+He did not live alone beyond the wildwood. He shared an old house with the Beldam and their child.
 
-A missing piece whenever the Old Maiden entered a tale. A peculiar fold whenever the Knight crossed the wildwood. A cut edge whenever she asked what had truly been said.
+Of that household he had offered a simple tale: an old love extinguished, a shared roof, a shared duty. A chapter ended, though the house remained.
 
-And after each difficult question, something bright. A joke. A gift. A kiss. A shining promise of the house.
+Yet fragments began arriving which seemed to belong to another telling.
 
-Gap. Gold. Fold. Promise.
+He said the Beldam knew of their love. Then asked the Maiden to hide it.
 
-Gap. Gold. Fold. Promise.
+He said he was free to travel. Yet each crossing of the wildwood required another secret.
 
-Again. And again. And again.
+Perhaps there was an explanation. Perhaps some piece had not arrived.
 
-One evening, watching the Knight smile as he offered yet another dazzling fragment, the Maiden saw something she had not noticed before.
+The Maiden asked.
 
-The armor was still golden. The face was still familiar. But in her mind the noble cloak became a trickster's mantle.
+“I do not know,” said the Knight.
 
-His crest seemed to divide into two theatrical masks, one smiling, one weeping. His easy grin looked suddenly like a practiced sleight of hand.
+“That is simply how she is,” he said another time.
 
-She blinked. The vision vanished. The Knight remained.
+“You think too much,” he said at last.
 
-Yet she could never quite forget how naturally the Trickster's costume had fitted him.
+Once, when the Maiden guessed at a missing middle, he reached beneath his cloak and produced a fragment that fitted her fear exactly.
 
-And somewhere upon the table, between two stories that would not meet, a little space remained empty.
+She remembered that his hand had known where to find it.
 
-The clock ticked.`},
- {id:'ii',number:'II',title:'The Hunt for the Missing Middles',art:'02_part_ii_midnight_detective.webp',body:`
+She did not yet know how often she would remember.
+
+At the edge of the table, the clock ticked.
+`},
+{"id": "ii", "number": "II", "title": "The Hunt for the Missing Middles", "art": "02_part_ii_midnight_detective.webp", "body": `
 Thereafter, the Maiden's questions changed. She no longer asked only where a piece belonged. She began asking where it had come from.
 
-“Why does the Old Maiden speak as though you belong to her?”
+“Why does the Beldam speak as though you belong to her?” she asked.
 
-“She does not.”
+“She does not,” said the Knight.
 
 “Then why do her pieces say otherwise?”
 
 “She is jealous.”
 
-“Why tell me she knows of us, then ask me to hide?”
+The Maiden placed another fragment beside it. “Why tell me she knows of us, then ask me to hide?”
 
-“I never said she knew everything.”
+“I never said she knew everything,” he replied.
 
-“Why say you are free to travel when every journey becomes another secret?”
+“And why say you are free to travel when every journey becomes another secret?”
 
 “You are twisting my words.”
 
@@ -198,91 +290,91 @@ The Maiden looked at the scattered fragments. “I am trying to untwist them.”
 
 ---
 
-At first, the Knight could still charm the questions away. He made her laugh. He teased her. He brought treasures from his travels.
+At first, he could still charm the questions away.
 
-When she lifted a dark piece toward the candlelight, he offered a brighter one. The house. The garden. The ring.
+A joke. A gift. A journey sweet enough to make the chamber seem very far away.
 
-“Why spend your nights among these ugly fragments,” he asked, “when you know what we are building?”
+When she lifted a troubling piece toward the candlelight, he might lay a little treasure in her other hand.
 
-And the Maiden would remember the beautiful beginning.
+Or point toward her translucent house.
 
-She would set the troubling piece aside. Accept the gift. Listen to another story.
+“Why spend your nights among these ugly fragments,” the Knight asked, “when you know what we are building?”
 
-For a little while, she could see only the Golden Knight.
+Sometimes he brought dream-pieces of his own. A garden matching hers. Two chairs. A ring bright enough to cast its own reflection.
 
-But unfinished stories have a way of calling after midnight.
+She could not yet know whether he meant to earn them, or only knew how splendidly they shone beside her wishes.
 
----
+They were not deeds. She knew that.
 
-Soon the Maiden scarcely slept. At first, she had sought one missing piece. Then three. Then seven. Before long, she ceased counting.
+Still, she remembered the beginning. Accepted the gift. Set the question down for a little while.
 
-Night after night, she spread the troublesome stories across the chamber floor.
-
-Tales of the Old Maiden. Promises of journeys never taken. Visits abandoned at the very hour they were meant to begin. Stories that changed between one telling and the next.
-
-She marked missing spaces with red wax. Folded corners with silver thread. Cuts with charcoal.
-
-She compared dates. Studied old letters. Replayed conversations until she could hear their words in her dreams.
-
-By dawn her chamber resembled the chart of some feverish astronomer attempting to map a constellation that refused to remain in the sky.
-
-Still she worked. For if there was a pattern, there might be a reason.
-
-And if there was a reason, there might be a missing piece.
-
-And if she found the piece... *Click.*
-
-*Ah. Now I understand.*
-
-That was all she wanted. To understand. To set the little story down. To be free to live the next.
+A little while was not the same as an answer.
 
 ---
 
-Then she found the first piece that had plainly been altered. A corner shaved. A road bent. A symbol painted over.
+His excuses acquired their own familiar shapes.
 
-“You changed this,” she told the Knight.
+“I must earn coins,” the Knight told her. “You would not understand.”
 
-“I did not.”
+The Maiden looked up from a book she had been trying to study.
 
-She held it against the light. “The edge has been cut.”
+“I understand work,” she said.
 
-He shrugged. “I have never been good at puzzles.”
+“Your studies are different. I have a household to keep.”
 
-The explanation comforted her more than it should have.
+She had duties too. Difficult days. Work whose value did not vanish because it had not entered his purse.
 
-Perhaps he was merely careless. Perhaps he had broken things while trying to mend them. Perhaps he did not understand the harm.
+But before long she was defending her right to be tired, and the question she had meant to ask lay unanswered between them.
 
-Had they not tried building together once before, long ago?
+Some nights he could not speak because he must earn. Other nights he could not speak because earning had exhausted him.
 
-The Knight remembered that puzzle too. “You abandoned it,” he reminded her, “because you disliked a piece I gave you.”
+Yet there was time for a warmer tale when he wished to tell one.
 
-The Maiden remembered something different. A piece that had frightened her. A question left unanswered. A picture that seemed to change when she looked more closely.
-
-Yet so much of those years lay beneath dust that she could not be certain.
-
-She placed his recollection beside her own. Two pieces. Two different shapes. And another small gap between them.
+She began noticing where time became impossible. And where, quite suddenly, it could be found.
 
 ---
 
-The seasons turned. The golden hand of the enchanted clock continued advancing.
+The little house began changing in his stories.
 
-The Story-Knight spoke of the house. Of the ring. Of the garden. Of how splendid everything would be once circumstances improved.
+Not upon her board. In his telling.
 
-Then he acquired a magnificent steed. Silver-plated. Swift. Costly enough to furnish half a cottage.
+He must save for a castle, the Knight said. A proper beginning. Nothing less would do.
 
-The Maiden rejoiced for him. Yet when she placed the steed's piece into his puzzle, she noticed how brightly his crest shone upon it.
+“A few rooms above a shop would be enough to begin,” the Maiden suggested. “Or a little cottage. We might share a roof without waiting for towers.”
+
+“If I do that,” he replied, “I shall never have a castle.”
+
+“But we spoke of living. Not only owning.”
+
+The Knight waved the smaller possibilities aside.
+
+“Do you know what it means to start over?” he asked.
+
+*Start over.*
+
+Each time he spoke of living beside her, the words returned. As though sharing a table required him to become an entirely different man.
+
+Yet before her return, he had told her, he had not planned to leave the old house at all.
+
+She could find no earlier foundation for this castle.
+
+Only the place where she had asked for a life they might actually live.
+
+---
+
+Then came a magnificent steed. Silver-plated. Swift. Costly enough to furnish half a cottage.
+
+The Maiden rejoiced for him. Yet when its piece settled upon his board, his crest shone brightly on the reverse.
 
 Wanted. Planned. Purchased. Earned.
 
 *Click.*
 
-She looked toward the dream-house. Still translucent.
+She looked toward the house. Still translucent.
 
 The garden. Still translucent.
 
 The ring. Still translucent.
-
-The golden hand moved onward. The silver hand lagged behind.
 
 It was not the steed she begrudged him. It was the proof that he knew how to bring a chosen thing into being.
 
@@ -290,55 +382,108 @@ The future grew nearer in his stories... and no nearer upon the board.
 
 ---
 
-When the Maiden questioned him, his manner began to change.
+Soon she began recognizing a pattern in what did not join.
 
-At first, amusement. “My clever little puzzle-maker. Must you examine everything?”
+A gap when the Beldam entered a tale. A gift when the gap became difficult to ignore. A cut edge when the Maiden asked what had truly been said. A promise laid over the place that would not close.
 
-Then impatience. “Why can you never leave well enough alone?”
+Gap. Gift. Cut. Promise.
+
+Again. And again.
+
+One evening the candlelight caught the Knight's cloak strangely.
+
+Gold still. Familiar still.
+
+Yet for an instant its folds resembled a trickster's mantle. Upon his breast, the crest seemed to divide: one little mask smiling, another weeping.
+
+She blinked. The Knight remained.
+
+The missing middle remained too.
+
+---
+
+She had slept badly before his letters. Now even those few hours began disappearing into another kind of work.
+
+At first she sought one missing piece. Then three. Then seven. Before long, she ceased counting.
+
+Red wax marked the gaps. Silver thread connected dates. Charcoal followed a road that changed whenever she thought she had found its course.
+
+The space where her study book should have rested became a map of his visits.
+
+The mechanism she had been building lay beneath his letters.
+
+She would return to her own work when she understood this one thing, she told herself.
+
+Only this one thing.
+
+By dawn her chamber resembled the chart of some feverish astronomer attempting to map a constellation that refused to remain in the sky.
+
+---
+
+When she questioned him, amusement gave way to impatience.
+
+“My clever little puzzle-maker,” the Knight said. “Must you examine everything?”
+
+Later: “Why can you never leave well enough alone?”
 
 Then silence. Then distance. Then anger.
 
 At times he threatened to cease building beside her altogether.
 
-And whenever the Maiden feared losing him, the original question slipped from her hands.
+And whenever she feared losing him, the original question slipped from her hands.
 
 She found herself begging for warmth instead of asking for truth.
 
-Slowly, she became skilled at explaining his broken pieces for him.
+---
 
-*He is frightened. He is overwhelmed. He was wounded long ago. He does not mean to hurt me. He loves me.*
+In those hours, she made a little verse. Something to carry her past the sight of another damaged edge.
 
-Sometimes those explanations might even have been true. But truth in one piece did not prove the truth of another.
+*Fear has worn his courage thin;*
 
-The Maiden had always known this about puzzles. Somehow she had forgotten it about love.
+*Old wounds keep the darkness in.*
 
-And the Knight's wound became the most persuasive explanation of all.
+*He means no hurt; he loves me still.*
 
-She could pity his pain so deeply that she stopped looking at the hand still holding the knife.
+*It must be fear, not want of will.*
+
+She repeated it when he withdrew. When he grew angry. When she could not understand why a man who spoke so tenderly of loving her would not answer a small, plain question.
+
+Some of it might have been true.
+
+But truth in one piece did not prove the truth of another.
+
+The Maiden had always known this about puzzles. Somehow she was forgetting it about love.
 
 ---
 
-The chamber filled with unfinished stories. Her candles burned low. Her paints dried. Her books lay unopened.
+Her own books remained unopened. The paints thickened in their little pots. Dust settled upon the machines.
 
-At times she forgot to eat until the moon had crossed the sky.
+The lantern had always burned late in this room. Once it had lit the things she was learning to make.
 
-Still she worked. She could feel a picture emerging beneath the broken pieces. A picture she did not want to recognize.
+Now its light fell upon another person's missing middles.
 
-And beneath the Knight's golden armor, whenever he offered another beautiful explanation, she could almost see the Trickster's little masks gleam.`},
- {id:'iii',number:'III',title:'The Dark Pieces',art:'03_part_iii_dark_pieces.webp',body:`
-One evening the Story-Knight gave her a piece unlike the others.
+She could feel a picture emerging beneath them.
+
+She worked harder, as though effort might persuade it to become a different one.
+`},
+{"id": "iii", "number": "III", "title": "The Dark Pieces", "art": "03_part_iii_dark_pieces.webp", "body": `
+The cold pieces had been arriving for months.
+
+She had named the first change while the bright beginning still lay close enough to touch. Naming it had not brought the warmth back.
+
+One evening, the Story-Knight gave her a piece heavier than any she had held before.
 
 Dark. Heavy. Cold.
 
 Its edge bit into her palm. She dropped it. Blood rose between her fingers.
 
-“What is this?”
+“What is this?” the Maiden asked.
 
-“A piece.”
+“A piece,” the Knight replied.
 
-“It has cut me.”
+“It has cut me,” the Maiden said.
 
-“It is not so terrible.”
+“It is not so terrible,” the Knight said.
 
 She held out her wounded hand. “Look.”
 
@@ -420,25 +565,25 @@ A memory. A confession. Remorse shaped around details she did not possess.
 
 “I am sorry you hurt,” she told him.
 
-“You did it.”
+“You did it,” the Knight insisted.
 
-“I believe you.”
+“I believe you,” the Maiden answered.
 
-“You destroyed me.”
+“You destroyed me,” the Knight said.
 
-“I cannot remember what you describe.”
+“I cannot remember what you describe,” the Maiden said.
 
-“How convenient.”
+“How convenient,” the Knight replied.
 
-“I am not saying it did not happen.”
+“I am not saying it did not happen,” the Maiden said.
 
-“Then admit it.”
+“Then admit it,” the Knight demanded.
 
-“I am trying.”
+“I am trying,” the Maiden answered.
 
-“You always say you do not remember.”
+“You always say you do not remember,” the Knight said.
 
-“Because I do not.”
+“Because I do not,” the Maiden replied.
 
 She wished she could reach beneath the dust and retrieve every missing piece. If only to understand. If only to apologize with the clarity he demanded.
 
@@ -468,23 +613,23 @@ Then she pointed toward the fresh dark pieces between them. “And these are hap
 
 The Knight scarcely looked.
 
-“They are nothing compared with what you did.”
+“They are nothing compared with what you did,” the Knight said.
 
-“This one cut me.”
+“This one cut me,” the Maiden said.
 
-“You cut me worse.”
+“You cut me worse,” the Knight replied.
 
-“This one kept me awake for nights.”
+“This one kept me awake for nights,” the Maiden said.
 
-“You know nothing of the nights I endured.”
+“You know nothing of the nights I endured,” the Knight answered.
 
-“I am not denying your suffering.”
+“I am not denying your suffering,” the Maiden said.
 
-“You always make yourself the victim.”
+“You always make yourself the victim,” the Knight replied.
 
-“I am showing you a wound.”
+“I am showing you a wound,” the Maiden said.
 
-“And I am showing you mine.”
+“And I am showing you mine,” the Knight answered.
 
 She looked between their puzzles. One wound old and clouded by memory. One fresh enough that her hand still bled.
 
@@ -492,11 +637,11 @@ She looked between their puzzles. One wound old and clouded by memory. One fresh
 
 The Knight's expression hardened. “You never take responsibility.”
 
-“I have apologized for pain I cannot even remember causing.”
+“I have apologized for pain I cannot even remember causing,” the Maiden said.
 
-“Then your apology means nothing.”
+“Then your apology means nothing,” the Knight replied.
 
-“How can I give you a memory I do not possess?”
+“How can I give you a memory I do not possess?” the Maiden asked.
 
 He turned away.
 
@@ -510,41 +655,49 @@ The new pieces grew darker. One bruised her. Another sliced her thumb. Some seem
 
 She carried them to the Knight.
 
-“These are hurting me.”
+“These are hurting me,” the Maiden said.
 
-“You are too sensitive.”
+“You are too sensitive,” the Knight replied.
 
-“They were not like this before.”
+“They were not like this before,” the Maiden said.
 
-“They were.”
+“They were,” the Knight answered.
 
 She placed gold beside grey. Smooth beside jagged. Warm beside cold.
 
-“Look.”
+“Look,” the Maiden said.
 
-“I see no difference.”
+“I see no difference,” the Knight replied.
 
-“There is a difference.”
+“There is a difference,” the Maiden insisted.
 
-“You wish there were.”
+“You wish there were,” the Knight said.
 
 The Maiden began to cry. “Why will you not see what is happening to me?”
 
-“You make everything so heavy.”
+“You make everything so heavy,” the Knight replied.
 
-“The pieces are heavy.”
+“The pieces are heavy,” the Maiden said.
 
-“You make them heavy.”
+“You make them heavy,” the Knight answered.
 
-And she wondered whether madness might feel exactly like this: holding a blade sharp enough to draw blood... while someone beside you calmly insists there is no blade.
+She looked down at her palm. At the edge. At her palm again.
+
+The blood was there. She pressed a cloth against it, then unfolded the cloth to be certain.
+
+Perhaps she had held the piece incorrectly. Perhaps she had mistaken the color.
+
+She set gold beside grey once more. This time she wrote the date beneath them, before she could be told she had remembered it wrong.
 
 ---
 
-Her nights disappeared entirely. The troubling pieces covered the chamber.
+Whatever remained of her nights disappeared into the work she had already promised herself she would soon put down.
+
+The troubling pieces covered the chamber. Her study books could scarcely be found beneath them.
 
 She sorted them by cut. By fold. By weight. By wound.
 
-She traced the same marks again and again. An absence whenever the Old Maiden appeared. A fold whenever the Knight crossed the wildwood. A missing middle whenever the Maiden asked what had been said.
+She traced the same marks again and again. An absence whenever the Beldam appeared. A fold whenever the Knight crossed the wildwood. A missing middle whenever the Maiden asked what had been said.
 
 A flash of gold whenever the contradiction grew impossible to ignore.
 
@@ -554,59 +707,59 @@ Again. Again. Again.
 
 The pattern was undeniable to her. So she returned to the Knight.
 
-“These stories do not fit.”
+“These stories do not fit,” the Maiden said.
 
-“They do.”
+“They do,” the Knight replied.
 
-“Then explain the gaps.”
+“Then explain the gaps,” the Maiden said.
 
-“I cannot.”
+“I cannot,” the Knight answered.
 
-“The cuts?”
+“The cuts?” the Maiden asked.
 
-“I did not make them.”
+“I did not make them,” the Knight said.
 
-“Why tell me she knows, then hide me?”
+“Why tell me she knows, then hide me?” the Maiden asked.
 
-“She is mad.”
+“She is mad,” the Knight replied.
 
-“Why say you are free, then travel only in secrecy?”
+“Why say you are free, then travel only in secrecy?” the Maiden asked.
 
-“I do not know.”
+“I do not know,” the Knight answered.
 
-“Why does every road lead back to her house if nothing binds you there?”
+“Why does every road lead back to her house if nothing binds you there?” the Maiden asked.
 
-“Enough.”
+“Enough,” the Knight said.
 
 The Knight struck the table. Pieces scattered like little bones. The Maiden flinched. Still she pressed.
 
-“There must be a missing piece.”
+“There must be a missing piece,” the Maiden insisted.
 
-“There is none.”
+“There is none,” the Knight replied.
 
-“Then why does nothing fit?”
+“Then why does nothing fit?” the Maiden asked.
 
-“You are obsessed.”
+“You are obsessed,” the Knight said.
 
-“Because the stories keep changing.”
+“Because the stories keep changing,” the Maiden answered.
 
-“You have trust issues.”
+“You have trust issues,” the Knight replied.
 
-“Because pieces keep disappearing.”
+“Because pieces keep disappearing,” the Maiden said.
 
-“You are making me feel dreadful.”
+“You are making me feel dreadful,” the Knight said.
 
-“I am telling you I am confused.”
+“I am telling you I am confused,” the Maiden answered.
 
-“I cannot do this now.”
+“I cannot do this now,” the Knight replied.
 
-“Please help me understand.”
+“Please help me understand,” the Maiden said.
 
-“You make me into a monster.”
+“You make me into a monster,” the Knight replied.
 
-“I am asking what happened.”
+“I am asking what happened,” the Maiden said.
 
-“Perhaps we should stop building together.”
+“Perhaps we should stop building together,” the Knight answered.
 
 There it was. Whenever she questioned the middle... he threatened the ending.
 
@@ -618,21 +771,23 @@ Wondering how she had begun with a bleeding hand and ended begging him to believ
 
 Then another candle. Another night. Another floor of fragments.
 
-She began making guesses before he spoke.
+The guessing that had begun with one uneasy question became almost her whole method of speaking to him.
 
-*Perhaps he fears the Old Maiden. Perhaps he protects the child. Perhaps she threatens him. Perhaps he feels guilty.*
+Now she began making guesses before he spoke.
+
+*Perhaps he fears the Beldam. Perhaps he protects the child. Perhaps she threatens him. Perhaps he feels guilty.*
 
 She carried these imagined pieces to him.
 
-“Is it this?”
+“Is it this?” the Maiden asked.
 
-“No.”
+“No,” the Knight said.
 
-“Then this?”
+“Then this?” the Maiden asked.
 
-“Must we begin again?”
+“Must we begin again?” the Knight replied.
 
-“What about this?”
+“What about this?” the Maiden asked.
 
 Sometimes his expression shifted. Sometimes she knew she had come close.
 
@@ -640,57 +795,48 @@ And occasionally he reached beneath his cloak... and gave her the very piece she
 
 *Click.*
 
-She had solved it. And she hated the sound.
+There was the sound again.
 
-For he had held that piece while she spent nights wondering whether she had lost her senses for believing it existed.
+Once it had released her from a question. Now she dreaded it.
+
+No easy breath followed. No little story resting cleanly upon the board.
+
+The piece fitted, yes. But he had held it while she spent nights wondering whether she could trust her own eyes.
+
+She had not merely solved a story. She had learned how long he had watched her struggle without giving her what he knew.
+
+And beyond that clean little join waited all the other gaps.
 
 ---
 
-At last exhaustion accomplished what understanding could not.
+The darkness did not end with that discovery.
 
-She stopped asking one question. The next piece was lighter. She ignored a contradiction. The Knight grew warmer.
+There were more candles. More mornings lost. More attempts to speak gently enough that a question might be allowed to remain a question.
 
-She accepted a crooked story. Affection returned. She let a gap remain untouched. The next piece scarcely hurt.
+At times the Maiden's own words became sharp. She heard herself repeat an accusation before she could decide whether it belonged to a fact or a fear.
 
-The Maiden noticed. So she watched.
+She apologized for the sharpness. Then began explaining the question again.
 
-Question. Darkness. Silence. Light. Boundary. Distance. Surrender. Warmth.
+Around and around the same little road.
 
-She placed the pieces side by side.
+The scraps of her own life waited beneath the table. Her unfinished studies. Her untouched paints. A machine missing only the part she had once been so eager to make.
 
-“Why do they change?”
+She could no longer remember the last evening she had reached for it first.
 
-“They do not.”
+Yet still she believed that somewhere among the Knight's pieces was an answer which would let her return to being the woman she had been before the hunt.
 
-She pointed toward the board. “Here.”
+So she watched him come nearer.
 
-“No.”
+Watched him move away.
 
-“They grew lighter here.”
+And began counting those steps too.
+`},
+{"id": "iv", "number": "IV", "title": "The Dance of Distance", "art": "04_part_iv_dance_of_distance.webp", "body": `
+Once the Puzzle Maiden began counting the Knight's steps, she made one mistake.
 
-“You were simply happier.”
+She believed understanding the dance would teach her how to mend it.
 
-The Maiden stared at the dividing line. Then she looked at her hands.
-
-At some point, the Knight had stopped trimming every piece himself. She had taken up the knife.
-
-She was sanding his corners. Inventing his middles. Cutting away whatever prevented his stories from fitting.
-
-Sometimes the little pieces she shaved away were her own.
-
-And suddenly she understood why his gifts had grown gentle again.
-
-The puzzle had not healed. She had learned which parts of herself to surrender to keep the Knight kind.
-
-Yet she did not leave. Not then.
-
-She became quiet. And began to watch.`},
- {id:'iv',number:'IV',title:'The Dance of Distance',art:'04_part_iv_dance_of_distance.webp',body:`
-Once the Puzzle Maiden recognized the pattern, she made one mistake.
-
-She believed understanding it would teach her how to mend it.
-
-So when the Story-Knight withdrew, she drew nearer. When his letters grew cold, hers grew warmer. When he seemed uncertain, she tried to become certainty itself.
+So when he withdrew, she drew nearer. When his letters grew cold, hers grew warmer. When he seemed uncertain, she tried to become certainty itself.
 
 Reassurance. Affection. Plans. Patience. Proof.
 
@@ -698,63 +844,55 @@ Every piece seemed to say: *I am here.*
 
 Yet the closer she came, the farther he retreated.
 
-“You keep pushing me away,” he told her.
+“You keep pushing me away,” the Knight told her.
 
 The Maiden stared at the distance between them. “I have never stood nearer.”
 
-“You press too hard.”
+“You press too hard,” he said.
 
 “I am trying to reach you.”
 
 “You make me want to run.”
 
-“But I am showing you that I love you.”
+“But I am showing you that I love you,” she answered.
 
-He did not answer. Sometimes the picture answered for him.
+He did not reply. Sometimes the picture answered for him.
 
 ---
 
-She remembered how hard he had once worked to be permitted near her puzzle.
+She remembered the care with which he had once approached the borders of her board.
 
-At their reunion, she had been guarded. Fiercely so.
+How patiently he had waited there. How slowly she had made room. That was no forgotten part of the story; it was the part that made this one so difficult to understand.
 
-She did not allow just anyone to place pieces beside hers. She checked every edge. Turned every story over. Trusted slowly.
+Surely he would be delighted by the trust he had asked her to give.
 
-But the Knight remained.
-
-He spoke of a love that had survived nearly two decades. Of a heart that had never belonged quite so completely to another. Of destiny. Of finding his missing piece.
-
-At first, she kept his pieces at the border of her board. Then nearer. Then, slowly, she let them settle beside hers.
-
-She allowed his stories to affect her picture. His hopes to touch hers. His future to rest beside her dream-pieces.
-
-And when at last she turned toward him without fear, something changed.
-
-She loved him openly. Fiercely.
-
-She wanted the house. The garden. The family table. The life they had named together.
-
-Surely he would be delighted. Yet now her attention seemed to weary him. Her excitement irritated him. Her longing for closeness became pressure.
+Yet now her attention seemed to weary him. Her excitement irritated him. Her longing for closeness became pressure.
 
 *You worked so hard to be placed here. Why do you keep pulling away now that I have made room?*
 
----
-
 So she chased harder. Then hated herself for chasing. Then tried to become smaller. Then feared that her smallness would make him forget her.
 
-Eventually she grew too tired to reach at all.
+---
 
-She fell silent. Went numb. Turned her eyes elsewhere.
+At last exhaustion accomplished what understanding could not.
 
-And then... the Knight returned.
+She stopped asking one question. Accepted a crooked story. Let an unanswered letter lie.
 
-A warmer letter. A tender word. A sudden fear.
+At some point, the Knight had stopped trimming every piece himself. She had taken up the knife.
 
-“I do not want to lose you.”
+She was sanding his corners. Inventing his middles. Cutting away whatever prevented his stories from fitting.
 
-For a little while, he resembled the Knight of the beginning. The Maiden would look up. Her heart would open. She would make room for him again.
+Sometimes the little pieces she shaved away were her own.
 
-And slowly... he would retreat.
+Her need to ask. Her wish to be heard. Her right to say that something hurt without first proving she had never hurt anyone.
+
+And as she made herself smaller, the Knight grew warmer.
+
+A kinder letter. A gift. Attention arriving where she had ceased asking for it.
+
+She reached toward him again. The warmth receded.
+
+She grew still. He came nearer.
 
 Closer. Farther. Closer. Farther.
 
@@ -764,9 +902,127 @@ The Maiden hated it. She hated wondering whether she must stop looking at someon
 
 She hated rationing affection. She hated believing that loving freely might somehow make her less worthy of being loved.
 
-Yet the pattern remained. When she feared losing him, she pursued. When he feared something she could not name, he withdrew.
+---
+
+Then one evening she looked beyond the latest piece.
+
+Across the whole board lay a difference she had been living inside without naming all at once.
+
+The first light.
+
+The long darkness she had shown him, and he had insisted was not dark. Or not so dark. Or darkness she had made herself.
+
+And now light again.
+
+But not the same light.
+
+The beginning had invited her nearer. This warmth seemed to ask how much of herself she was prepared to leave outside.
+
+“Look,” the Maiden said, placing the three regions before him. “Here. And here. And here.”
+
+The Knight folded his arms. “We were always like this.”
+
+“No,” she said. “First this changed. I told you then. And now it has changed again.”
+
+“You were simply happier before.”
+
+The Maiden looked at the scraps beside her knife.
+
+Happiness was not what she had been shaving away.
+
+---
+
+Still she reached for an explanation.
+
+Old habit. Old hunger. The little road worn deep by all those nights.
+
+Perhaps his attention had belonged to another woman during the dark season. Perhaps it had returned to her alone.
+
+For a moment, that imagined piece seemed to connect everything: the missing warmth, the guarded letters, the stories of the Beldam, the sudden return.
+
+It bore no crest. It was not proof. She knew the difference.
+
+But she could scarcely bear to leave it unspoken.
+
+If she saw a possible trick and said nothing, would he mistake her silence for not seeing? Would he believe he had passed a broken picture beneath her eyes and found her too foolish to notice?
+
+The insult burned almost as fiercely as the uncertainty.
+
+“Was there someone else?” she asked him. “Is that why the pieces changed?”
+
+“No,” said the Knight.
+
+“Then help me understand the change.”
+
+“You have decided what you want to believe,” he replied.
+
+She had not. She wanted the truth to be kinder than the piece she had imagined.
+
+Yet she heard herself pressing the same possibility again, as though naming it often enough might force an honest middle into the gap.
+
+It could not. A suspicion repeated was still a suspicion.
+
+---
+
+“I am trying to know the life you are asking me to share,” she told him at last.
+
+“I have told you I love you,” the Knight said.
+
+“That does not tell me what is happening.”
+
+He looked away.
+
+“I cannot honestly choose a life with you if you decide which of its real pieces I am allowed to see.”
+
+The Knight seemed to hear an accusation where she had tried to place a condition of choosing.
+
+She, meanwhile, could see what the old method was doing to her. Anger sharpening a question. Fear dressing a guess as certainty. Her own patterns joining his until neither could be examined without touching the other.
+
+She did not wish to live that way either.
+
+---
+
+The Knight pointed toward his gifts.
+
+“Look at what I have done for you,” he said. “The things I have bought. The care I have given. And still you say I do nothing.”
+
+The Maiden had not said that.
+
+Those pieces were real. She had treasured them. She had thanked him.
+
+Now he arranged them like a ledger of debts.
+
+“How am I to save for a castle,” he asked, “when so much goes to you?”
+
+She looked toward the smaller home she had suggested, the rooms above a shop he would not discuss.
+
+“I did not ask you to buy my silence,” she said. “Or to spend upon gifts instead of the steps you promised.”
+
+“You make kindness sound ugly.”
+
+“I am asking why kindness is being used to explain why nothing else can move.”
+
+But the gifts had become evidence against her. The care a charge she must repay by asking less.
+
+And again he spoke of starting over.
+
+As though she had asked him to become another person, rather than to bring the man who wrote his letters into the same room as the man who lived his days.
+
+---
 
 So at last she began studying not only pieces... but wounds.
+
+In the puzzleverse, a wound was not merely a dark memory.
+
+It was a place where a piece had broken the keeper's trust in what might happen next. An old departure could make a new silence seem bottomless. A betrayal could stain a harmless question before it reached the table.
+
+The first hurt remained in its own time. Its color might keep leaking forward.
+
+The Maiden knew how to follow a color across a picture. Now she began following the same fear through stories that had happened years apart.
+
+Which present piece had opened an older place? Which response belonged to this day, and which had arrived carrying the weight of many?
+
+It did not make every guess true. It gave her another pattern to examine. Her own hands belonged within that examination too.
 
 ---
 
@@ -780,7 +1036,7 @@ And perhaps, with time, those defenses had become tricks.
 
 How to withdraw before someone could leave. How to charm when consequences drew near. How to make sorrow look like innocence. How to turn an old wound into an answer for every new one he inflicted.
 
-This was the Trickster she had glimpsed beneath the armor. Not another being. The Knight himself.
+Beneath the gold, a familiar glimmer. At the edge of the candlelight, two little masks. Neither cast a shadow separate from his own.
 
 A wounded man who had learned deceptive ways of protecting his wound, and who had come to defend those ways rather than change them.
 
@@ -790,59 +1046,53 @@ The wound explained the armor. It did not excuse the blades he chose to wield.
 
 The Maiden read ancient books. Listened to travelers. Heard tales of those who longed for closeness until closeness arrived, then fled from it.
 
-She found stories about pursuers too. Those whose old wounds whispered: *If someone I love moves away, I must reach faster before they disappear.*
+Some called them runners.
+
+There were pursuers in those tales too. People whose old wounds whispered: *If someone I love moves away, I must reach faster before they disappear.*
 
 The Maiden hated recognizing herself. But she did.
 
-So she returned to her own dusty puzzle. Not to escape the Knight. To understand herself.
+She returned to her own dusty puzzle. To the disappearances and unreliable loves that had taught her to hurry after warmth before it vanished.
 
-She uncovered old pieces. A disappearance. A rejection. An unreliable love. The ache of never knowing when someone important might vanish.
-
-She cleaned them carefully. Sometimes two pieces finally touched.
+Two pieces touched.
 
 *Click.*
 
-“Ah,” she whispered. “When someone grows distant, I fear this.”
+“When someone grows distant,” she whispered, “I fear this.”
 
 Another. *Click.* “And when I fear it, I chase.”
 
-Another. *Click.* “And when I chase, I sometimes speak too sharply.”
+Another. *Click.* “And sometimes I speak too sharply. I try to force certainty because uncertainty once hurt me.”
 
-Another. *Click.* “I try to force certainty because uncertainty once hurt me.”
+This sound brought a little of the old relief.
 
-For once, solving a painful puzzle brought relief. Not because it excused her. Because it showed her where she could grow.
+It did not make the Knight's hidden pieces hers to find. It showed her a part of her own craftsmanship she could change.
 
 ---
 
-The next time the Knight withdrew, she felt the old terror rise.
+The next time he withdrew, she felt the familiar storm rise.
 
-*Go after him. Explain. Fix it. Send another letter.*
+*Explain. Fix it. Send another letter.*
 
-Instead, she sat beside the feeling. It was dreadful.
+Sometimes she did. Sometimes she spoke harshly and apologized afterward.
 
-She walked through the forest. Read. Cleaned. Painted. Listened to music. Anything that might let the storm pass without turning it into another blade.
+But sometimes she caught the anxious piece before she threw it.
 
-Sometimes she succeeded. Sometimes she still chased. Sometimes she spoke harshly and apologized afterward.
+She walked through the forest. Read a little. Sat with the feeling until it ceased demanding that another person settle it at once.
 
-Sometimes she caught the anxious piece before she threw it.
-
-Slowly, new pieces appeared. Pause. Reflection. Restraint. Repair.
+Pause. Reflection. Restraint. Repair.
 
 Not perfection. Change.
 
-Her silver moon-bunny crest glowed upon each. She was proud of them.
+Her silver moon-bunny crest glowed upon each new piece.
 
 ---
 
-But she was still watching the Knight. And another pattern emerged.
+She was still watching the Knight. Another difference began to show.
 
-She was learning. He was explaining. She was changing. He was defending.
+When she found a harmful piece in her own hands, she tried to change what she made next.
 
-When the Maiden found something harmful in herself, she tried to mend it.
-
-When she named something harmful in him, the Knight often replied:
-
-“That is who I am.”
+When she named one in his, he often replied: “That is who I am.”
 
 Or: “I cannot help it.”
 
@@ -850,86 +1100,85 @@ Or: “You know what I have endured.”
 
 Or: “I have to.”
 
-That last answer frightened her most. For eventually he admitted that he had been altering stories.
+That answer frightened her most.
 
-Not all at once. Not the whole truth. But enough.
+Eventually he admitted that he had been altering stories. Not all at once. Not the whole truth. But enough.
 
-“Yes, I tell the Old Maiden different tales.”
+“Yes, I tell the Beldam different tales,” the Knight said. “I must.”
 
-“I must.”
+“And conceal my place in your life?” the Maiden asked.
 
-“Yes, I conceal your place in my life.”
+“Yes. For now, there is no other way.”
 
-“I must.”
-
-“Yes, I change what she believes.”
-
-“For now, there is no other way.”
-
-The Maiden looked toward the dream-house. The Knight followed her gaze.
+He followed her gaze toward the dream-house.
 
 “When I have that,” he said, “I shall not need to anymore.”
 
 The house shimmered. Still translucent. The clock ticked.
 
-“If you are free of her, why must I remain hidden?”
+“If you are free of her, why must I remain hidden?” the Maiden asked.
 
-“You know why.”
+“You know why,” he replied.
 
 “Why not leave the old house?”
 
-“It is complicated.”
+“It is complicated,” the Knight said.
 
-“Why not come nearer to mine?”
+“Why not come nearer to mine?” she asked.
 
 “Not yet.”
 
 “Why protect her comfort while asking me to bear the pain?”
 
-“That is not what I am doing.”
+“That is not what I am doing,” he replied.
 
 “Then give me the pieces that would let me understand.”
 
 The Knight looked away. “I cannot.”
 
-And there it was again. Not always a lack of knowledge. Sometimes a decision about which pieces she was permitted to possess.
+There it was again. Not always a lack of knowledge. Sometimes a decision about which pieces she was permitted to possess.
+
+She could not make that decision truthful by guessing more cleverly.
 
 ---
 
-The Maiden did not leave. Instead, she began writing laws for the borders of her own puzzle.
+Among the travelers were others who had lived beside runners. Others who had mistaken disappearing warmth for a puzzle they could solve by becoming easier to love.
+
+They spoke of stronger laws at the borders of a board.
+
+The Maiden thought at first of her old defenses: everyone outside, or someone trusted entirely within. A high wall. One narrow gate. Once opened, scarcely a question about what came through it.
+
+These laws were different.
+
+A filter. Not a hiding place.
+
+She could let a person come near without accepting every story that person wished to place beside hers.
+
+She began a list of pieces no longer welcome upon her board.
+
+Known falsehoods offered as truth. Questions answered with punishment. Cruelty excused by old pain. Apologies used to purchase the right to repeat the same harm.
 
 Not commands for the Knight. Promises to herself.
 
-No more counterfeit pieces knowingly placed beside her own. No more confusing apologies with repair when nothing changed.
+He was free to choose his stories. She was free to refuse a place for them within her life.
 
-No more allowing ancient wounds to excuse fresh blades. No more making herself responsible for solving another person's honesty.
+The laws were not meant to change him. Or punish him. If he continued making pieces that crossed those borders, he could no longer stand within them.
 
-And beneath these she wrote something harder: *I must live by these laws as well.*
+And beneath the list she wrote something harder: *I must live by these laws as well.*
 
 When frightened, she would try not to wound. When cruel, she would repair. When mistaken, she would correct the story.
 
-When she discovered an ugly pattern in herself, she would not merely call it her nature and leave it untouched.
-
-Healing did not require anyone to arrive whole. But it required honest work upon what was broken.
-
-A wound might explain the making of a Trickster. It could not excuse remaining one.
+A boundary could not do its work if she kept lifting it whenever she feared being left.
 
 ---
 
 The Maiden still loved the Story-Knight. That was perhaps the most inconvenient piece of all.
 
-She understood why closeness might awaken old terror. She could see pieces of herself reflected in his pain.
+But now she watched what came to the border before deciding what might enter.
 
-But understanding the wound did not make the blade disappear. And compassion could not build a house alone.
-
-For the first time, she allowed two futures to exist. Perhaps the house would become real. Perhaps it would not.
-
-Then she returned to her own board. Not to leave him. Not yet.
-
-Only to begin earning pieces that existed whether he crossed the wildwood or not.
-
-Behind her, the clock continued to tick.`},
- {id:'v',number:'V',title:'The Piece That Belonged to Her',art:'05_part_v_build_those_pieces.webp',body:`
+And, for the first time in a long while, she lifted one of her own study books out from beneath his letters.
+`},
+{"id": "v", "number": "V", "title": "The Piece That Belonged to Her", "art": "05_part_v_build_those_pieces.webp", "body": `
 The Puzzle Maiden did not depart the moment she learned to stand still. That would have made a simpler tale.
 
 Instead, she stayed long enough to discover whether the dance might change when only one dancer ceased repeating the old steps.
@@ -956,7 +1205,7 @@ But other pieces arrived as they always had. Bent. Incomplete. Heavy. Sharp.
 
 Now she placed them upon the table exactly as they were.
 
-“This is what you gave me.”
+“This is what you gave me,” the Maiden said.
 
 The Knight frowned. “You are looking at it wrong.”
 
@@ -972,23 +1221,27 @@ Then he noticed something else.
 
 The Maiden was no longer seated at the edge of her board awaiting his next piece.
 
-New roads appeared. Books she had meant to read. Songs she had forgotten she loved. Strange little machines she had once dreamed of building.
+Old roads became visible beneath the scattered fragments. Books she had meant to read. Songs she had forgotten she loved. Strange little machines she had already begun to build.
 
 Paint beneath her fingernails. Letters to friends. Animals. Journeys. Music. Creation.
 
 Pieces involving the child whose laughter had always shone brightly within her picture.
 
+Her studies waited where she had left them. Difficult still. Hers still. She began giving them an hour which would once have disappeared into the Knight's unanswered letters.
+
 The Maiden had not stopped loving the Knight. She had simply remembered that love was never meant to occupy the whole board.
 
 ---
 
-That was when he moved closer again.
+Once more, he moved closer.
+
+She recognized the turn. This time she tried to watch it without cutting herself smaller to preserve it.
 
 Warm letters. Attention. Tenderness. Pieces uncannily similar to those from the beginning.
 
-“I miss you.”
+“I miss you,” the Knight wrote.
 
-“I do not want to lose you.”
+“I do not want to lose you,” he told her.
 
 “You are the only one.”
 
@@ -1013,11 +1266,17 @@ The Maiden looked toward the enchanted clock.
 
 The golden hand had traveled far. The silver hand remained behind.
 
-She studied the dream-house. Still translucent.
+She studied the dream-house. Still translucent. Then the clock again.
 
-For the first time, she understood the clock without wishing its hands would move differently.
+She had known its law from the evening she first showed it to him. Gold for promises. Silver for promises met.
+
+A visit kept had moved the silver once. A difficult truth freely told could have moved it now. So could a small, honest step toward sharing a home.
+
+The clock did not count the miles across the wildwood. A long road could explain a slow journey; it could not make a journey of standing still.
 
 The distance was not between their kingdoms. It was between promise and practice.
+
+She stopped asking the golden hand to stand as evidence for the silver.
 
 After all this time, the Knight could still describe the house perfectly. He simply had not built toward it.
 
@@ -1031,33 +1290,33 @@ She let the sting pass.
 
 “If we are to keep placing pieces beside one another, I need the known parts of your stories, even when they make you look worse.”
 
-“I tell you everything.”
+“I tell you everything,” said the Knight.
 
-“No.”
+“No,” the Maiden answered.
 
 His expression hardened.
 
-“I need apologies followed by different craftsmanship.”
+“I need apologies followed by different craftsmanship,” she said.
 
-“I apologize constantly.”
+“I apologize constantly,” the Knight replied.
 
 “I know.”
 
-“Then what more do you want?”
+“Then what more do you want?” he demanded.
 
-“Change.”
+“Change,” said the Maiden.
 
 The word seemed to offend him.
 
-“I need questions answered without punishment.”
+“I need questions answered without punishment,” she continued.
 
-“I do not punish you.”
+“I do not punish you,” he said.
 
 “I need you to stop hiding me while telling me the hiding is necessary.”
 
-“You know my situation.”
+“You know my situation,” the Knight replied.
 
-“I know the explanation.”
+“I know the explanation,” she answered.
 
 She looked at him. “That is not the same as agreeing to live inside it forever.”
 
@@ -1065,17 +1324,17 @@ She looked at him. “That is not the same as agreeing to live inside it forever
 
 The Knight looked wounded. Then angry. Then frightened.
 
-“You are abandoning me.”
+“You are abandoning me,” the Knight said.
 
 Her chest tightened. Once, those words would have sent her running toward him. Now she remained where she stood.
 
-“I am not abandoning you by having limits.”
+“I am not abandoning you by having limits,” she told him.
 
-“You promised you would never leave.”
+“You promised you would never leave,” the Knight said.
 
-“I promised I would try.”
+“I promised I would try,” the Maiden answered.
 
-“You are just as you were before.”
+“You are just as you were before,” he said.
 
 The ancient wound. Again.
 
@@ -1097,33 +1356,33 @@ The Knight reached beneath his cloak. A translucent piece. The house. More beaut
 
 Golden windows. Moonflower gardens. Two figures beneath the trees.
 
-“This is what I want.”
+“This is what I want,” the Knight said.
 
 The Maiden looked at it. “So do I.”
 
-“Then why are you doing this?”
+“Then why are you doing this?” he asked.
 
 She touched its transparent edge. “Because wanting this does not build it.”
 
-“When everything settles down...”
+“When everything settles down...” the Knight began.
 
 The clock ticked.
 
-“When I have the house...”
+“When I have the house...” he continued.
 
-“You will be honest?”
+“You will be honest?” the Maiden asked.
 
-“Yes.”
+“Yes,” he said.
 
-“You will communicate?”
+“You will communicate?” she asked.
 
 “Yes.”
 
 “You will stop hiding me?”
 
-“Yes.”
+“Yes,” the Knight said again.
 
-“You will stop pulling away whenever I become close?”
+The Maiden held his gaze. “You will stop pulling away whenever I become close?”
 
 The Knight hesitated.
 
@@ -1171,6 +1430,8 @@ The Maiden could not solve that contradiction for him. It belonged to his puzzle
 
 Days passed. Then weeks.
 
+The laws remained at the border of her board. She did not conceal them. When a piece crossed them, she named it and refused to make room.
+
 Sometimes the Knight tried. Sometimes beautifully. Sometimes he acknowledged a cut. Other times he denied holding the knife.
 
 Sometimes tenderness arrived freely. Sometimes it appeared only when the Maiden began drifting away.
@@ -1180,6 +1441,10 @@ She watched. Not with the old fever. Not hunting for clues through sleepless nig
 She learned that one golden piece did not mend a darkened pattern. One apology did not rebuild a road.
 
 One frightened burst of love when loss became possible did not equal lasting change.
+
+Yet the same sharp pieces kept returning. The hidden stories. The question made into an offense. The old wound offered as permission for a new cut.
+
+He knew which pieces she would no longer accept. Still he brought them.
 
 And in time, the picture answered for itself.
 
@@ -1191,11 +1456,11 @@ Before her lay the pieces she had once feared to examine together.
 
 The Knight's laughter. His tenderness. The pieces she loved. The pieces that cut.
 
-Missing middles. Returns. Retreats. Promises. The Old Maiden. Hidden roads. The dream-house. The clock.
+Missing middles. Returns. Retreats. Promises. The Beldam. Hidden roads. The dream-house. The clock.
 
 None needed to be destroyed. Only seen.
 
-For years she had asked: *What piece am I missing?*
+For so long she had asked: *What piece am I missing?*
 
 Now the question had changed. *What does the picture already show?*
 
@@ -1221,9 +1486,9 @@ And she was allowed to decide whether the picture, taken whole, was one she wish
 
 The Story-Knight came to her that night. He found her sitting quietly before the board.
 
-“What are you doing?”
+“What are you doing?” the Knight asked.
 
-“Looking.”
+“Looking,” the Maiden said.
 
 “At what?”
 
@@ -1235,9 +1500,19 @@ The Maiden looked at him. “I hope you mend what hurts inside you.”
 
 His expression changed. “You mean without you.”
 
-“I do not know.”
+“Yes,” the Maiden said.
 
-For once, the words did not terrify her. “I truly do not know.”
+The word hurt. It did not change its shape.
+
+“I am leaving this courtship. You keep bringing what I have told you wounds me. You keep crossing the borders I have asked you to respect.”
+
+“I can change,” he said.
+
+“Then let your actions become different. But I will not remain here to be hurt while you promise they will.”
+
+She laid down the scraps she had made for his gaps. Her guesses. Her excuses. The little invented middles that had cost her so many nights.
+
+“I will not keep trying to make your pieces fit. Or fill in what you will not show me. My life cannot wait beside your promises.”
 
 The Knight pointed toward the dream-house. “What of that?”
 
@@ -1249,9 +1524,9 @@ The house remained. The garden remained. Love remained.
 
 But his name no longer rested across them.
 
-“You have taken me out.”
+“You have taken me out,” the Knight said.
 
-The Maiden shook her head. “No.”
+“I have stopped waiting for you to make these possible,” the Maiden answered.
 
 She studied the translucent pieces. “I have stopped believing the dream belongs to only one possible story.”
 
@@ -1267,6 +1542,8 @@ Upon its face was a little figure seated before an unfinished puzzle, an open ro
 
 Not abandoned. Not rescued. Simply free to choose what came next.
 
+She found its place among her own pieces: beside the studies she had loved before his letters, the little machine awaiting her hands, the roads already drawn upon her maps.
+
 The Maiden placed it down.
 
 *Click.*
@@ -1281,61 +1558,69 @@ Something better. Understanding herself.
 
 ---
 
-When she opened her eyes, the Knight remained. For a moment she saw all of him.
+When she opened her eyes, the Knight remained before the board.
 
-The golden armor. The imagined Trickster's mantle. The wounded Knight. The lover. The storyteller.
+The gold upon his cloak caught the lanternlight. At its edge, the shadow of a little mask moved when he moved.
 
-The frightened boy he once had been. The grown man responsible for what he chose to build from that hurt.
+She no longer needed to choose a single face and paint over everything that contradicted it. She had seen the tenderness. She had felt the blade.
 
-They were not separate creatures fighting over one body. They were parts of the same man.
+Whether he would tell the truth when concealment served him, put down the blade when an old hurt rose, repair what he had damaged, and meet his promises with action—those were choices only he could make.
 
-One carried an old wound. Another carried the tricks he had learned to protect it.
+They belonged to his puzzle.
 
-The wound did not erase the deception. Nor did the deception mean the wound had never been real.
-
-The Maiden no longer needed to decide which face was the true one. She had seen enough to know they both belonged.
-
-What mattered now was what he chose to do with them. And that belonged to his puzzle. Not hers.
+She would not spend another season making those choices for him in her imagination.
 
 ---
 
 The Maiden gathered her things. Her lantern. Her books. Her keys. Her paints. Her unfinished machines. Her maps.
 
-She reached toward the enchanted clock. Then paused. Smiled. And left it standing beside the board.
+The old study book opened where she had left a ribbon between its pages. Beneath his letters lay the drawing she had once stayed awake to finish.
 
-She no longer needed its hands to remind her that she would not wait forever.
+She recognized her own small notes in the margin. How eagerly she had written them.
+
+Nothing here asked her to become a different woman before she could begin again.
+
+She moved the letters aside.
+
+Her puzzle remained the one she had always kept. Its old wounds. Its real loves. Its difficult corners. The beautiful pieces and the painful ones from this courtship, no longer spread across every part of the picture.
+
+She was not beginning another puzzle. She was returning to the parts of this one she had left unattended.
+
+---
+
+Before she went, she looked once more at the enchanted clock.
+
+The hands stood where the promises and the actions had brought them. No farther.
+
+She set it upon the table.
+
+She would not keep her eyes upon its silver hand, waiting for permission to live.
+
+The Knight stood beyond the border she had drawn. This time, longing did not persuade her to lift it.
+
+She took her lantern and left him there.
 
 ---
 
 Outside, the kingdom seemed enormous. Almost offensively enormous.
 
-Roads she had never traveled. Forests she had forgotten existed. Cities glowing beyond mountains. Music drifting through distant windows.
+The road to a friend she had not visited. The workshop where a question still waited. The hills she had marked upon her map before the first letter crossed the wildwood.
 
-People she had not met. Things she had not built. Pieces she had not earned.
+There were studies to return to. Colors to mix. Things to build. Time with the child whose laughter belonged at the heart of her picture. Dreams that had not ceased to be hers because she had once hoped to share them with him.
 
-She unfolded a fresh parchment. At its top she wrote:
+She did not turn to see whether the Knight was following.
 
-*Places I have not yet seen.*
+She was no longer arranging her days around his next piece, or waiting for his progress before she could make her own.
 
-*Things I still want to build.*
+Her future had unknown places. That did not make her choice uncertain.
 
-*Stories that belong only to me.*
-
-Beneath them she added:
-
-**People may join my puzzle. No one may replace it.**
+She had left him. She was going back to her life.
 
 ---
 
-Whether the Story-Knight followed her someday was not written.
+Behind her lay a story she would not erase, and would no longer let occupy the whole board.
 
-Perhaps he would put down the knife and learn to mend his pieces. Perhaps he would continue wearing his wounds as proof that the cutting was necessary.
-
-Perhaps their roads would cross after both had changed. Perhaps they would not.
-
-For once, the Puzzle Maiden did not demand the ending. There were not enough pieces yet. And that was all right.
-
-Behind her, the dream-house shimmered beside an unfinished board. Ahead waited thousands of empty spaces.
+Beside her traveled the same unfinished puzzle. She knew its weight. Her own dreams shone among its living colors.
 
 The Maiden smiled.
 
@@ -1345,12 +1630,7 @@ And the empty spaces ahead no longer frightened her.
 
 They were not missing pieces. They were places where life had not happened yet.
 
-**And that was not a mystery to solve. It was a story still waiting to be lived.**`}
-],
- finale:[
- {title:'The Clock',image:'06_finale_clock-full.webp',quote:'The distance was not between kingdoms. It was between promise and practice.'},
- {title:'The Transparent House',image:'07_finale_transparent_house-full.webp',quote:'She stopped believing the dream belonged to only one possible story.'},
- {title:'The Moon-Bunny Piece',image:'08_finale_moon_bunny_piece-full.webp',quote:'Not certainty. Not victory. Understanding herself.'},
- {title:'The Open Road',image:'09_finale_open_road-full.webp',quote:'They were not missing pieces. They were places where life had not happened yet.'}
- ]
+**And that was not a mystery to solve. It was a story still waiting to be lived.**
+`}
+  ]
 };
