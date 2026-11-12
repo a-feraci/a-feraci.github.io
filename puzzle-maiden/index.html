@@ -11,47 +11,54 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=IM+Fell+English:ital@0;1&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css?v=20261111b">
-  <script src="story.js?v=20261111b" defer></script>
-  <script src="script.js?v=20261111b" defer></script>
+  <link rel="stylesheet" href="style.css?v=20261111c">
+  <script src="story.js?v=20261111c" defer></script>
+  <script src="reader-settings.js?v=20261111c" defer></script>
+  <script src="script.js?v=20261111c" defer></script>
 </head>
 <body>
   <div class="ambient" aria-hidden="true"></div>
   <header class="chrome-header">
     <a class="brand" href="#cover" id="brandHome" title="Return to the cover"><span class="brand-icon">☾</span><span>THE PUZZLE MAIDEN <small>&amp; THE STORY-KNIGHT</small></span></a>
     <div class="header-actions">
-      <button type="button" class="ui-btn" id="contentsToggle" aria-controls="contentsDrawer" aria-expanded="false" title="Table of contents"><span>☰</span><span class="desktop-label">Contents</span></button>
-      <button type="button" class="ui-btn" id="fontButton" title="Change font size"><span>Aa</span></button>
+      <button class="ui-btn" id="contentsToggle" aria-label="Table of contents" aria-controls="contentsDrawer" aria-expanded="false" title="Contents">☰</button>
+      <button class="ui-btn" id="dayNight" aria-label="Switch to night mode" aria-pressed="false" title="Day / night">☾</button>
+      <button class="ui-btn" id="musicButton" aria-label="Play fairytale music" aria-pressed="false" title="Fairytale music">♫</button>
+      <button class="ui-btn" id="settingsButton" aria-label="Reader settings" aria-haspopup="dialog" title="Reader settings">⚙</button>
     </div>
   </header>
-
   <a class="skip-link" href="#main">Skip to the book</a>
   <main class="stage" id="main">
-    <div class="eyebrow" id="chapterLabel" aria-live="polite">✦ AN ILLUMINATED FAIRYTALE ✦</div>
     <section class="book-shell" id="bookShell" aria-label="The interactive book">
       <div class="book-cover-edge" aria-hidden="true"></div>
       <div class="book" id="book" aria-live="polite"></div>
       <div class="spine-glint" aria-hidden="true"></div>
+      <div class="page-curl" aria-hidden="true"></div>
+      <nav class="reader-nav" aria-label="Book page navigation">
+        <button id="previous" class="nav-btn" aria-label="Previous page">❮</button>
+        <div class="reader-progress"><div class="reader-progress__labels"><span id="locationLabel">Cover</span><span id="pageCount" aria-live="polite">0 / 0</span></div><div class="progress-track" role="progressbar" aria-label="Reading progress" id="progressTrack" aria-valuemin="0" aria-valuemax="100"><div id="progressFill" class="progress-fill"></div></div></div>
+        <button id="next" class="nav-btn" aria-label="Next page">❯</button>
+      </nav>
     </section>
-    <nav class="reader-nav" aria-label="Book page navigation">
-      <button id="previous" class="nav-btn" aria-label="Previous page">❮ <span>Previous</span></button>
-      <div class="reader-progress"><div class="reader-progress__labels"><span id="locationLabel">Cover</span><span id="pageCount">0 / 0</span></div><div class="progress-track"><div id="progressFill" class="progress-fill"></div></div></div>
-      <button id="next" class="nav-btn" aria-label="Next page"><span>Next</span> ❯</button>
-    </nav>
-    <p class="reader-hint">Use the arrow keys to turn pages · Your reading position is saved on this device</p>
   </main>
-
   <aside class="drawer" id="contentsDrawer" role="dialog" aria-label="Table of contents" aria-modal="true" aria-hidden="true" inert>
-    <div class="drawer__inner">
-      <div class="drawer__head"><p>✧ THE INDEX ✧</p><button type="button" id="closeDrawer" aria-label="Close table of contents">✕</button></div>
-      <h2>Table of<br><em>Contents</em></h2>
-      <nav id="drawerLinks" class="drawer-links" aria-label="Chapters"></nav>
-      <p class="drawer-foot">☾ Some stories arrive unfinished. Others arrive with pieces someone never meant you to find. ☽</p>
-    </div>
+    <div class="drawer__inner"><div class="drawer__head"><p>✧ THE INDEX ✧</p><button id="closeDrawer" aria-label="Close table of contents">✕</button></div><h2>Table of<br><em>Contents</em></h2><nav id="drawerLinks" class="drawer-links" aria-label="Chapters"></nav></div>
   </aside>
   <div class="veil" id="veil" hidden></div>
-  <dialog id="artViewer" aria-label="Full-size illustration"><button id="closeViewer" aria-label="Close illustration">Close ✕</button><img id="viewerImage" alt=""></dialog>
-  <noscript><p class="no-script">Please enable JavaScript to turn the pages of this illustrated book.</p></noscript>
-  <footer class="footer">☾ MIDNIGHT TRICKSTER TAPESTRY · AN ORIGINAL ENCHANTED TALE ☽</footer>
-</body>
-</html>
+  <dialog id="settingsDialog" class="settings-dialog" aria-labelledby="settingsTitle">
+    <div class="dialog-head"><h2 id="settingsTitle">Your reading nook</h2><button id="closeSettings" aria-label="Close settings">✕</button></div>
+    <p class="settings-intro">A little comfort. A little enchantment.</p>
+    <fieldset><legend>Page palette</legend><div class="theme-grid" id="themeChoices">
+      <button data-theme="candlelight" style="--swatch:#f7e3bf">Candlelight</button><button data-theme="daylight" style="--swatch:#fffaf0">Daylight</button><button data-theme="midnight" style="--swatch:#252538">Midnight</button><button data-theme="rose" style="--swatch:#f5dfe3">Rose garden</button><button data-theme="sage" style="--swatch:#dfe8d6">Woodland</button><button data-theme="lavender" style="--swatch:#e9e1f3">Moonflower</button>
+    </div></fieldset>
+    <label class="setting-row" for="textSize">Text size <output id="textSizeValue">20 px</output></label><input id="textSize" type="range" min="16" max="32" step="1" value="20">
+    <label class="setting-row" for="textFont">Reading font</label><select id="textFont"><option value="storybook">Storybook serif</option><option value="oldbook">Old book</option><option value="georgia">Georgia</option><option value="palatino">Palatino</option><option value="sans">Clear sans serif</option></select>
+    <div class="color-settings"><label>Text color<input type="color" id="textColor" value="#432b33"></label><label>Page color<input type="color" id="paperColor" value="#f7e3bf"></label></div>
+    <fieldset><legend>Atmosphere</legend><label class="check-row"><input id="turnSound" type="checkbox" checked> Page-turn sound</label><label class="check-row"><input id="turnAnimation" type="checkbox" checked> Page-curl animation</label><label class="setting-row" for="musicVolume">Music volume <output id="musicVolumeValue">30%</output></label><input id="musicVolume" type="range" min="0" max="100" step="1" value="30"><p class="settings-note">Music starts with the ♫ button. Your reading preferences stay on this device.</p></fieldset>
+    <button id="resetSettings" class="reset-button">Restore candlelight defaults</button>
+  </dialog>
+  <dialog id="artViewer" aria-label="Full-size illustration"><div class="viewer-toolbar"><button id="zoomOut" aria-label="Zoom out">−</button><output id="zoomValue">100%</output><button id="zoomIn" aria-label="Zoom in">+</button><button id="closeViewer" aria-label="Close illustration">Close ✕</button></div><div id="imageViewport" tabindex="0" aria-label="Illustration; scroll to explore when zoomed"><div id="imageCanvas"><img id="viewerImage" alt="" draggable="false"></div></div></dialog>
+  <audio id="fairytaleMusic" src="assets/moonlit-garden.wav" loop preload="none"></audio><audio id="pageSound" src="assets/page-turn.wav" preload="auto"></audio>
+  <p id="audioStatus" class="sr-only" role="status"></p>
+  <noscript><p>Please enable JavaScript to read this illustrated book.</p></noscript>
+</body></html>
