@@ -26,10 +26,7 @@
   $('textColor').oninput=e=>{prefs.ink=e.target.value;apply();};
   $('paperColor').oninput=e=>{prefs.paper=e.target.value;prefs.theme='custom';apply();};
   $('turnSound').onchange=e=>{prefs.sound=e.target.checked;apply();};$('turnAnimation').onchange=e=>{prefs.animation=e.target.checked;apply();};$('musicVolume').oninput=e=>{prefs.volume=Number(e.target.value);apply();};
-  $('resetSettings').onclick=()=>{prefs={...defaults};lastLight='candlelight';window.ReadAloud?.reset();apply();};
-  function musicState(playing){$('musicButton').setAttribute('aria-pressed',String(playing));$('musicButton').setAttribute('aria-label',playing?'Pause fairytale music':'Play fairytale music');}
-  $('musicButton').onclick=async()=>{if(!music.paused){music.pause();return;}try{await music.play();}catch{$('audioStatus').textContent='Music could not start. Press the music button to try again.';musicState(false);}};
-  music.addEventListener('play',()=>musicState(true));music.addEventListener('pause',()=>musicState(false));music.addEventListener('error',()=>{$('audioStatus').textContent='Music is temporarily unavailable.';musicState(false);});
+  $('resetSettings').onclick=()=>{prefs={...defaults};lastLight='candlelight';window.ReadAloud?.reset();window.BookMusic?.reset();apply();};
   const sample=$('previewSample');
   sample.addEventListener('input',()=>{if(sample.textContent.length>200)sample.textContent=sample.textContent.slice(0,200);});
   sample.addEventListener('paste',e=>{e.preventDefault();const text=(e.clipboardData.getData('text/plain')||'').slice(0,200);sample.textContent=text;});

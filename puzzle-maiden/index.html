@@ -11,11 +11,12 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=IM+Fell+English:ital@0;1&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css?v=20261112e">
-  <script src="story.js?v=20261112e" defer></script>
-  <script src="reader-settings.js?v=20261112e" defer></script>
-  <script src="script.js?v=20261112e" defer></script>
-  <script src="read-aloud.js?v=20261112e" defer></script>
+  <link rel="stylesheet" href="style.css?v=20261112f">
+  <script src="story.js?v=20261112f" defer></script>
+  <script src="reader-settings.js?v=20261112f" defer></script>
+  <script src="music-player.js?v=20261112f" defer></script>
+  <script src="script.js?v=20261112f" defer></script>
+  <script src="read-aloud.js?v=20261112f" defer></script>
 </head>
 <body>
   <div class="ambient" aria-hidden="true"></div>
@@ -61,7 +62,8 @@
     <label class="setting-row" for="textSize">Text size <output id="textSizeValue">20 px</output></label><input id="textSize" type="range" min="16" max="32" step="1" value="20">
     <label class="setting-row" for="textFont">Reading font</label><select id="textFont"><option value="storybook">Storybook serif</option><option value="oldbook">Old book</option><option value="georgia">Georgia</option><option value="palatino">Palatino</option><option value="sans">Clear sans serif</option></select>
     <div class="color-settings"><label>Text color<input type="color" id="textColor" value="#432b33"></label><label>Page color<input type="color" id="paperColor" value="#f7e3bf"></label></div>
-    <fieldset><legend>Atmosphere</legend><label class="check-row"><input id="turnSound" type="checkbox" checked> Page-turn sound</label><label class="check-row"><input id="turnAnimation" type="checkbox" checked> Page-curl animation</label><label class="setting-row" for="musicVolume">Music volume <output id="musicVolumeValue">30%</output></label><input id="musicVolume" type="range" min="0" max="100" step="1" value="30"><p class="settings-note">Music starts with the ♫ button. Your reading preferences stay on this device.</p></fieldset>
+    <fieldset class="music-settings"><legend>The story’s soundtrack</legend><label class="setting-row" for="musicMode">Music journey</label><select id="musicMode"><option value="story">Follow the story’s mood</option><option value="playlist">Play the whole playlist</option><option value="track">Loop my chosen track</option></select><p id="musicNowPlaying" class="settings-note" role="status">Moonlit Garden</p><div class="music-controls"><button id="musicPrevious" type="button" aria-label="Previous music track">‹</button><button id="musicPlayPause" type="button">Play music</button><button id="musicNext" type="button" aria-label="Next music track">›</button></div><div id="musicPlaylist" class="music-playlist" role="group" aria-label="Fairytale music playlist"></div><label class="setting-row" for="musicVolume">Music volume <output id="musicVolumeValue">30%</output></label><input id="musicVolume" type="range" min="0" max="100" step="1" value="30"><p class="settings-note" id="musicHelp">Follow the story changes the music with each part. Choose a track to loop it, or listen to the playlist in order. Music starts only when you press Play.</p></fieldset>
+    <fieldset><legend>Atmosphere</legend><label class="check-row"><input id="turnSound" type="checkbox" checked> Page-turn sound</label><label class="check-row"><input id="turnAnimation" type="checkbox" checked> Page-curl animation</label><p class="settings-note">Your reading preferences stay on this device.</p></fieldset>
     <button id="resetSettings" class="reset-button">Restore candlelight defaults</button>
     </div>
   </dialog>

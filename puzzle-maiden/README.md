@@ -46,8 +46,16 @@ Text leaves now use chapter-based links. Legacy numeric page links, saved progre
 
 ## Page narration and clearer chapter labels
 
-The part number and chapter name now use bold, slightly larger type on a subtle palette-matched backing. The fixed book and header geometry is preserved.
+The part number and chapter name now use bold, slightly larger type directly over the illustrated page, without a backing box. The fixed book and header geometry is preserved.
 
 The toolbar speaker reads the open leaf, or both visible leaves from left to right on desktop. Tap it again to stop. Read-aloud settings provide the device’s available voices, speed from 0.6× to 1.4×, and Pause/Resume/Stop. Voice and speed are saved on this device. Paragraphs highlight and scroll within the page while spoken; music is lowered during narration. Page turns, chapter navigation, and leaving the page cancel speech. Playback never starts automatically.
 
 Narration uses the browser’s Web Speech API, without a site-managed speech service or key. Voices and availability depend on the browser/device. Short utterances keep long leaves manageable; late-loading voices, speech errors, and unsupported browsers have fallbacks. Illustrated leaves read their title and existing finale quotation; covers and character folios read their labels. No artwork captions are duplicated visually.
+
+## Eldermere and the chapter soundtrack
+
+Eldermere is the enchanted country where the tale begins. The puzzleverse is the universe whose puzzle laws govern the story.
+
+Settings now include a six-track soundtrack. “Follow the story’s mood” loops the appropriate theme for Parts I–V and uses Moonlit Garden for the covers, prologue, and folio. “Play the whole playlist” advances through all six tracks and wraps. Choosing an individual track switches to looping that track. Previous/next controls are also available. Music starts only after Play, remains paused through navigation if the reader pauses it, and never resumes automatically on reload. Narration still lowers the music volume.
+
+Five new original instrumental compositions are served as compressed stereo MP3s, approximately 65–93 seconds each, under `assets/music/`. See MUSIC.md for the track list.
