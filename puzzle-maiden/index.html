@@ -11,10 +11,11 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=IM+Fell+English:ital@0;1&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css?v=20261112d">
-  <script src="story.js?v=20261112d" defer></script>
-  <script src="reader-settings.js?v=20261112d" defer></script>
-  <script src="script.js?v=20261112d" defer></script>
+  <link rel="stylesheet" href="style.css?v=20261112e">
+  <script src="story.js?v=20261112e" defer></script>
+  <script src="reader-settings.js?v=20261112e" defer></script>
+  <script src="script.js?v=20261112e" defer></script>
+  <script src="read-aloud.js?v=20261112e" defer></script>
 </head>
 <body>
   <div class="ambient" aria-hidden="true"></div>
@@ -23,10 +24,12 @@
     <div class="header-actions">
       <button class="ui-btn" id="contentsToggle" aria-label="Table of contents" aria-controls="contentsDrawer" aria-expanded="false" title="Contents">☰</button>
       <button class="ui-btn" id="dayNight" aria-label="Switch to night mode" aria-pressed="false" title="Day / night">☾</button>
+      <button class="ui-btn" id="readAloudButton" aria-label="Read this page aloud" aria-pressed="false" title="Read this page aloud"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M11 5 6 9H3v6h3l5 4Z"/><path d="M15 8a6 6 0 0 1 0 8m3-11a10 10 0 0 1 0 14"/></svg></button>
       <button class="ui-btn" id="musicButton" aria-label="Play fairytale music" aria-pressed="false" title="Fairytale music">♫</button>
       <button class="ui-btn" id="settingsButton" aria-label="Reader settings" aria-haspopup="dialog" title="Reader settings">⚙</button>
     </div>
   </header>
+  <p class="narration-notice" id="narrationNotice" role="status" hidden></p>
   <a class="skip-link" href="#main">Skip to the book</a>
   <main class="stage" id="main">
     <section class="book-shell" id="bookShell" aria-label="The interactive book">
@@ -51,6 +54,7 @@
     <p class="settings-intro">A little comfort. A little enchantment.</p>
     <div class="settings-preview" aria-label="Live book and text preview"><div class="preview-spread"><div class="preview-leaf preview-left"><span class="preview-moon" aria-hidden="true">☾</span></div><div class="preview-leaf preview-right"><div class="preview-copy"><p id="previewSample" contenteditable="true" role="textbox" aria-label="Preview sample text" spellcheck="false">Under a silver moon, a new story began.</p></div></div></div><p class="preview-caption">Live preview · tap the sample to edit it</p></div>
     <div class="settings-controls">
+    <fieldset class="narration-settings"><legend>Read aloud</legend><p class="settings-note" id="readAloudHelp">Tap the speaker in the top bar to hear the open page. On a two-page spread, it reads left to right.</p><label class="setting-row" for="narrationVoice">Narrator voice</label><select id="narrationVoice"><option value="">Automatic English voice</option></select><label class="setting-row" for="narrationRate">Reading speed <output id="narrationRateValue">1×</output></label><input id="narrationRate" type="range" min="0.6" max="1.4" step="0.1" value="1"><div class="narration-buttons"><button id="narrationPlay" type="button">Read this page</button><button id="narrationPause" type="button" disabled>Pause</button><button id="narrationStop" type="button" disabled>Stop</button></div><p class="settings-note narration-status" id="narrationStatus" role="status">Ready to read. Voice choices depend on your device.</p></fieldset>
     <fieldset><legend>Page palette</legend><div class="theme-grid" id="themeChoices">
       <button data-theme="candlelight" style="--swatch:#f7e3bf">Candlelight</button><button data-theme="daylight" style="--swatch:#fffaf0">Daylight</button><button data-theme="midnight" style="--swatch:#252538">Midnight</button><button data-theme="rose" style="--swatch:#f5dfe3">Rose garden</button><button data-theme="sage" style="--swatch:#dfe8d6">Woodland</button><button data-theme="lavender" style="--swatch:#e9e1f3">Moonflower</button>
     </div></fieldset>
