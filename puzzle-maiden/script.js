@@ -24,7 +24,11 @@
     }
     return paragraphs;
   }
-  function groupBlocks(body){
+  function groupBlocks(body,keepOpeningTogether=false){
+    if(keepOpeningTogether){
+      const boundary=body.indexOf('\n\n---');
+      if(boundary>=0)return [splitParagraphs(body.slice(0,boundary)),...groupBlocks(body.slice(boundary+5))];
+    }
     const paragraphs=splitParagraphs(body), out=[];
     let cur=[], len=0;
     for(const block of paragraphs){
@@ -41,7 +45,7 @@
     pageMap.set(chapter.id,pages.length);
     pages.push({type:'chapter-art',chapter:chapter.id,number:chapter.number,title:chapter.title,image:chapter.art});
     let leaf=0;
-    const addText=(body)=>{const chunks=groupBlocks(body);chunks.forEach((blocks,n)=>pages.push({type:'text',chapter:chapter.id,number:chapter.number,title:chapter.title,blocks,id:`leaf-${chapter.id}-${++leaf}`,part:n+1,of:chunks.length}));};
+    const addText=(body)=>{const chunks=groupBlocks(body,chapter.keepOpeningTogether&&leaf===0);chunks.forEach((blocks,n)=>pages.push({type:'text',chapter:chapter.id,number:chapter.number,title:chapter.title,blocks,id:`leaf-${chapter.id}-${++leaf}`,part:n+1,of:chunks.length}));};
     if(chapter.id!=='v'){addText(chapter.body);continue;}
     // Preserve the exact finale order at the narrative moments where each symbol resolves.
     const anchors=[
@@ -122,16 +126,16 @@
     if(page.type==='toc')return `<article class="page ${side}"><div class="page-inner"><div class="toc-on-page">${tocMarkup()}</div>${bottom}</div></article>`;
     if(['frontispiece','chapter-art','finale','character'].includes(page.type)){
       const file=page.type==='frontispiece'?'00_cover.webp':page.image;
-      const spoken=page.type==='frontispiece'?'Frontispiece. '+BOOK.title+'.':page.type==='chapter-art'?'Part '+({I:1,II:2,III:3,IV:4,V:5}[page.number]||page.number)+'. '+page.title+'. Illustration.':page.type==='character'?'Character folio. '+page.title+'.':page.title+'. '+(page.quote||'');
+      const spoken=page.type==='frontispiece'?'Frontispiece. '+BOOK.title+'.':page.type==='chapter-art'?'Part '+({I:1,II:2,III:3,IV:4,V:5}[page.number]||page.number)+'. '+page.title+'.':page.type==='character'?'Character folio. '+page.title+'.':page.title+'. '+(page.quote||'');
       return `<article class="page ${side} art-page" data-read-aloud="${esc(spoken)}"><div class="page-inner"><img class="zoomable" src="assets/${esc(file)}" alt="${esc(page.title)}" role="button" tabindex="0" aria-label="Enlarge illustration: ${esc(page.title)}"></div></article>`;
     }
-    if(page.type==='text')return `<article class="page ${side}"><div class="page-inner"><div class="page-top">✧ PART ${page.number} · ${esc(page.title)} ✧</div><div class="prose" tabindex="0" aria-label="Story text; scroll to read this leaf">${prose(page.blocks)}</div>${bottom}</div></article>`;
+    if(page.type==='text')return `<article class="page ${side}"><div class="page-inner"><div class="prose" tabindex="0" aria-label="Story text; scroll to read this leaf">${prose(page.blocks)}</div>${bottom}</div></article>`;
     if(page.type==='lore')return `<article class="page ${side} lore"><div class="page-inner"><div class="page-top">THE ENCHANTED WORLD</div><h2 class="page-title">Laws of the Puzzle</h2><div class="prose" tabindex="0"><p><strong>Eldermere</strong> is the enchanted country where this tale begins. The puzzleverse is their universe, where these laws hold.</p><p><strong>Every life is a living puzzle.</strong> Events leave pieces behind, beautiful or painful. True pieces carry the crests of those who shaped them.</p><p><strong>Stories gather related pieces.</strong> An unfolding story may be unfinished. A story presented as complete while its known middle is concealed cannot be understood honestly.</p><p><strong>Dream-pieces are translucent.</strong> They represent hoped-for futures. They become solid through deeds.</p><p><strong>The clock has two hands.</strong> Gold advances with promises; silver advances when promises are met by action.</p><p><strong>The moon-bunny crest</strong> marks the Maiden’s own pieces: curiosity, self-knowledge, and the freedom to choose what comes next.</p><p><strong>Old wounds can leak into new pieces.</strong> Their colors may explain a pattern without excusing a fresh cut.</p><p><strong>Masks and armor</strong> may share a shadow. Understanding the wound does not erase responsibility for the blade.</p><p><strong>Boundaries filter what may enter.</strong> A keeper can welcome closeness while refusing lies, cruelty, and repeated harm.</p><p><strong>Empty spaces</strong> may be places where life has not happened yet.</p></div>${bottom}</div></article>`;
     return '';
   }
   function pageHash(n){return pages[n].id||(pages[n].type==='chapter-art'?pages[n].chapter:`page-${n+1}`);}
   function parseHash(){let id;try{id=decodeURIComponent(location.hash.slice(1));}catch{return -1;}const migrated=legacyPosition(id);return findIndex(migrated?.id||id);}
-  function render(){
+  function render(reason='manual'){
     index=clamp(index);
     const cover=['cover','back'].includes(pages[index].type),start=spreadStart(index);
     const visible=cover||isMobile()?[pages[index]]:[pages[start],pages[start+1]?.type==='back'?null:pages[start+1]];
@@ -149,17 +153,18 @@
     saveSetting('puzzle-maiden-edition',BOOK.edition);
     history.replaceState(null,'',`#${pageHash(index)}`);
     syncBookmarks();
-    window.ReadAloud?.pageChanged();
+    window.ReadAloud?.pageChanged({automatic:reason==='narration'});
     window.BookMusic?.pageChanged(page.chapter||'');
   }
-  function goto(n){if(n<0)return;const before=index;index=clamp(n);closeDrawer();render();if(index!==before)window.Reader?.turn(index-before);}
+  function goto(n,reason='manual'){if(n<0)return false;const before=index;index=clamp(n);closeDrawer();render(reason);if(index!==before)window.Reader?.turn(index-before);return index!==before;}
   function gotoId(id){goto(findIndex(id));}
-  function turn(delta){
+  function turn(delta,reason='manual'){
     const start=spreadStart(index),step=isMobile()?1:2;
-    if(index===0){if(delta>0)goto(1);return;}
-    if(delta<0&&index===pages.length-1){goto(spreadStart(index-1));return;}
-    goto(delta<0&&start===1?0:start+delta*step);
+    if(index===0)return delta>0?goto(1,reason):false;
+    if(delta<0&&index===pages.length-1)return goto(spreadStart(index-1),reason);
+    return goto(delta<0&&start===1?0:start+delta*step,reason);
   }
+  window.BookNavigation={nextForNarration(){return index<pages.length-1&&turn(1,'narration');}};
   const viewer=document.getElementById('artViewer'),viewerImage=document.getElementById('viewerImage');
   let zoomOrigin=null,zoomScale=1;
   const viewport=document.getElementById('imageViewport'),canvas=document.getElementById('imageCanvas');

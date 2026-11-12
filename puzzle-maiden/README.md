@@ -46,9 +46,9 @@ Text leaves now use chapter-based links. Legacy numeric page links, saved progre
 
 ## Page narration and clearer chapter labels
 
-The part number and chapter name now use bold, slightly larger type directly over the illustrated page, without a backing box. The fixed book and header geometry is preserved.
+Chapter titles appear on the illustrated chapter openers. Prose leaves do not repeat the part number or title; the footer still identifies the current part. The fixed book and header geometry is preserved.
 
-The toolbar speaker reads the open leaf, or both visible leaves from left to right on desktop. Tap it again to stop. Read-aloud settings provide the device’s available voices, speed from 0.6× to 1.4×, and Pause/Resume/Stop. Voice and speed are saved on this device. Paragraphs highlight and scroll within the page while spoken; music is lowered during narration. Page turns, chapter navigation, and leaving the page cancel speech. Playback never starts automatically.
+The toolbar speaker reads the open leaf, or both visible leaves from left to right on desktop. Tap it again to stop. Read-aloud settings provide the device’s available voices, speed from 0.6× to 1.4×, and Pause/Resume/Stop. Voice and speed are saved on this device. Paragraphs highlight and scroll within the page while spoken; music is lowered during narration. Manual page turns, chapter navigation, and leaving the page cancel speech. Optional continuous reading turns pages automatically after each leaf/spread and stops at the back cover. Playback never starts automatically.
 
 Narration uses the browser’s Web Speech API, without a site-managed speech service or key. Voices and availability depend on the browser/device. Short utterances keep long leaves manageable; late-loading voices, speech errors, and unsupported browsers have fallbacks. Illustrated leaves read their title and existing finale quotation; covers and character folios read their labels. No artwork captions are duplicated visually.
 
@@ -59,3 +59,13 @@ Eldermere is the enchanted country where the tale begins. The puzzleverse is the
 Settings now include a six-track soundtrack. “Follow the story’s mood” loops the appropriate theme for Parts I–V and uses Moonlit Garden for the covers, prologue, and folio. “Play the whole playlist” advances through all six tracks and wraps. Choosing an individual track switches to looping that track. Previous/next controls are also available. Music starts only after Play, remains paused through navigation if the reader pauses it, and never resumes automatically on reload. Narration still lowers the music volume.
 
 Five new original instrumental compositions are served as compressed stereo MP3s, approximately 65–93 seconds each, under `assets/music/`. See MUSIC.md for the track list.
+
+## Character entrances and continuous narration
+
+The Maiden’s entrance now introduces her beauty, wisdom, features, love of patterns, and the origin of her name before the first concrete puzzle example. The Knight receives his proper introduction before any reference to his return. Both accounts of their earlier courtship say that she had only just stepped beyond girlhood and he had stood just before the gates of manhood.
+
+The longer opening stays on one intentional leaf (`keepOpeningTogether`) so existing chapter text links retain their destinations. The book still has 94 leaves.
+
+The Read aloud settings include **Keep reading and turn pages automatically**, off by default and saved on the device. Automatic turns allow the curl animation to finish before speech resumes. Pause suspends pending turns; Stop, manual navigation, a speech error, or the end of the book ends the current reading session. Turning the option off lets the current leaf finish and cancels a pending turn. Voice previews never turn pages. Playback never resumes automatically on reload.
+
+The voice picker shows English narrators by default, hides novelty voices unless Show all device voices is selected, and prioritizes voices whose names indicate natural/neural/enhanced/premium quality. Familiar storytelling voices follow. Try this voice previews a short sample, and Refresh voices checks the browser again after system downloads. The Mac help link explains how to add system voices; the site cannot install voices or guarantee that a browser exposes all installed options.

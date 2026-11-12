@@ -28,22 +28,26 @@ window.BOOK = {
 ,
   "legacyPositions": [{"id":"cover","exact":true},{"id":"frontispiece","exact":true},{"id":"contents","exact":true},{"id":"i","exact":true},{"id":"leaf-i-3","exact":false},{"id":"leaf-i-2","exact":false},{"id":"leaf-i-3","exact":false},{"id":"leaf-i-4","exact":false},{"id":"leaf-i-5","exact":false},{"id":"leaf-i-7","exact":false},{"id":"leaf-i-8","exact":false},{"id":"leaf-i-9","exact":false},{"id":"leaf-i-10","exact":false},{"id":"leaf-i-11","exact":false},{"id":"leaf-i-12","exact":false},{"id":"ii","exact":true},{"id":"leaf-ii-1","exact":false},{"id":"leaf-ii-2","exact":false},{"id":"leaf-ii-7","exact":false},{"id":"leaf-ii-4","exact":false},{"id":"leaf-ii-5","exact":false},{"id":"leaf-ii-6","exact":false},{"id":"leaf-ii-5","exact":false},{"id":"leaf-ii-8","exact":false},{"id":"leaf-ii-9","exact":false},{"id":"leaf-ii-10","exact":false},{"id":"iii","exact":true},{"id":"leaf-iii-1","exact":false},{"id":"leaf-iii-3","exact":true},{"id":"leaf-iii-4","exact":true},{"id":"leaf-iii-5","exact":true},{"id":"leaf-iii-6","exact":false},{"id":"leaf-iii-7","exact":false},{"id":"leaf-iii-8","exact":false},{"id":"leaf-iii-9","exact":false},{"id":"leaf-iii-11","exact":false},{"id":"leaf-iii-13","exact":false},{"id":"leaf-iii-14","exact":false},{"id":"leaf-iii-15","exact":false},{"id":"leaf-iii-16","exact":false},{"id":"iv","exact":true},{"id":"leaf-iv-1","exact":false},{"id":"leaf-iv-2","exact":false},{"id":"leaf-iv-2","exact":false},{"id":"leaf-iv-3","exact":false},{"id":"leaf-iv-10","exact":false},{"id":"leaf-iv-11","exact":false},{"id":"leaf-iv-13","exact":false},{"id":"leaf-iv-11","exact":false},{"id":"leaf-iv-13","exact":false},{"id":"leaf-iv-15","exact":false},{"id":"leaf-iv-16","exact":false},{"id":"leaf-iv-18","exact":false},{"id":"leaf-iv-19","exact":false},{"id":"v","exact":true},{"id":"leaf-v-1","exact":true},{"id":"leaf-v-2","exact":false},{"id":"leaf-v-3","exact":false},{"id":"leaf-v-4","exact":false},{"id":"leaf-v-5","exact":false},{"id":"finale-the-clock","exact":true},{"id":"leaf-v-6","exact":false},{"id":"leaf-v-7","exact":false},{"id":"leaf-v-8","exact":false},{"id":"leaf-v-9","exact":true},{"id":"leaf-v-10","exact":true},{"id":"leaf-v-11","exact":false},{"id":"leaf-v-12","exact":false},{"id":"leaf-v-13","exact":true},{"id":"leaf-v-15","exact":false},{"id":"finale-the-transparent-house","exact":true},{"id":"leaf-v-16","exact":false},{"id":"finale-the-moon-bunny-piece","exact":true},{"id":"leaf-v-18","exact":false},{"id":"leaf-v-18","exact":false},{"id":"leaf-v-20","exact":false},{"id":"leaf-v-21","exact":false},{"id":"finale-the-open-road","exact":true},{"id":"characters","exact":true},{"id":"character-knight","exact":true},{"id":"lore","exact":true},{"id":"back","exact":true}],
   "chapters": [
-{"id": "i", "number": "I", "title": "The Stories We Let Touch Our Own", "art": "01_part_i_living_puzzle.webp", "body": `
-Long ago, in the enchanted country of Eldermere, no life could be laid flat and read from beginning to end.
+{"id": "i", "number": "I", "keepOpeningTogether": true, "title": "The Stories We Let Touch Our Own", "art": "01_part_i_living_puzzle.webp", "body": `
+Long ago, in the enchanted country of Eldermere, there lived a maiden of rare beauty and remarkable wisdom.
 
-Each person kept an enchanted puzzle. Each happening left a piece. Such were the laws of their universe: the puzzleverse.
+Her hair fell in glorious waves of moon-white and rose-pink. Her turquoise eyes held the bright, searching light of someone who noticed what the rest of the room had missed. Freckles scattered across her cheeks like a small, private constellation.
 
-A friendship. A small invention. A kindness. A promise kept. A promise broken. A lesson whose meaning arrived years after its cost.
+She had a smile that could turn a room toward spring, and a mind that could find a road between the stars.
 
-No two pictures were alike. One might open upon a harbor; another, a forest. A garden could grow beside a workshop. A road might disappear beneath a childhood room and emerge, much later, at the sea.
+Of all the wonders in Eldermere, she loved patterns best. A curious corner. A color returning where no one expected it. The patient little conversation between an edge and the space beside it.
+
+Where others saw scattered fragments, she began to glimpse a picture. She could follow a thread through a tangled telling, remember a small detail long forgotten, and turn a difficult piece until its true place revealed itself.
+
+People began calling her the Puzzle Maiden. The name traveled from those she had helped: keepers who had brought her their bewildering stories and found, beside her patience, a little clarity. Her gift was keen. The care with which she used it made it precious.
+
+In their universe, the puzzleverse, every person kept an enchanted puzzle. Each happening left a piece. A friendship. A small invention. A kindness. A promise kept. A promise broken.
+
+No two pictures were alike. Hers held gardens beside workshops, books beside unexplored roads. There was room for all she loved, and room for what she had not yet lived.
 
 The pictures changed as their keepers lived. They were not supposed to be finished.
 
-The Puzzle Maiden loved them for that.
-
-She loved a curious corner. A color returning where she had not expected it. The patient little conversation between an edge and the space beside it.
-
-And she was very good at listening.
+How she loved watching them come together.
 
 ---
 
@@ -125,9 +129,7 @@ But those hours had belonged to her own making.
 
 Her studies. Her paints. The little machines she wished to understand and build. Books with difficult passages. Problems whose answers did not punish her for looking.
 
-She was tired before the Knight returned.
-
-She was not yet spending her nights trying to assemble him.
+Even in her weariness, she kept a little light burning for the things she still wished to make.
 
 ---
 
@@ -143,7 +145,7 @@ A road would change between tellings. A middle would grow misty. The ending, som
 
 The Maiden had known him then.
 
-Nearly two decades before, he had courted her. They had been young, though not equally young; she had only just stepped beyond girlhood. There had been laughter, affection, and pieces she remembered warmly.
+Nearly two decades before, he had courted her. She had only just stepped beyond girlhood; he had stood just before the gates of manhood. There had been laughter, affection, and pieces she remembered warmly.
 
 There had also been a trickster's glimmer she had not quite known how to name.
 
@@ -491,7 +493,7 @@ He glanced at it, then turned toward an ancient corner of his own puzzle. Dust l
 
 “There,” he said. “Look at what you gave me.”
 
-The pieces lay nearly two decades behind them. Back when the Maiden had only just stepped beyond girlhood, and the Knight, older but still young, stood near the gates of manhood.
+The pieces lay nearly two decades behind them. Back when the Maiden had only just stepped beyond girlhood, and the Knight had stood just before the gates of manhood.
 
 A dark mark spread across his puzzle. From one piece into another. Then another.
 

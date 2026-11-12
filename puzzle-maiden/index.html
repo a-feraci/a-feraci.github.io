@@ -11,12 +11,12 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=IM+Fell+English:ital@0;1&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css?v=20261112f">
-  <script src="story.js?v=20261112f" defer></script>
-  <script src="reader-settings.js?v=20261112f" defer></script>
-  <script src="music-player.js?v=20261112f" defer></script>
-  <script src="script.js?v=20261112f" defer></script>
-  <script src="read-aloud.js?v=20261112f" defer></script>
+  <link rel="stylesheet" href="style.css?v=20261112g">
+  <script src="story.js?v=20261112g" defer></script>
+  <script src="reader-settings.js?v=20261112g" defer></script>
+  <script src="music-player.js?v=20261112g" defer></script>
+  <script src="script.js?v=20261112g" defer></script>
+  <script src="read-aloud.js?v=20261112g" defer></script>
 </head>
 <body>
   <div class="ambient" aria-hidden="true"></div>
@@ -55,7 +55,7 @@
     <p class="settings-intro">A little comfort. A little enchantment.</p>
     <div class="settings-preview" aria-label="Live book and text preview"><div class="preview-spread"><div class="preview-leaf preview-left"><span class="preview-moon" aria-hidden="true">☾</span></div><div class="preview-leaf preview-right"><div class="preview-copy"><p id="previewSample" contenteditable="true" role="textbox" aria-label="Preview sample text" spellcheck="false">Under a silver moon, a new story began.</p></div></div></div><p class="preview-caption">Live preview · tap the sample to edit it</p></div>
     <div class="settings-controls">
-    <fieldset class="narration-settings"><legend>Read aloud</legend><p class="settings-note" id="readAloudHelp">Tap the speaker in the top bar to hear the open page. On a two-page spread, it reads left to right.</p><label class="setting-row" for="narrationVoice">Narrator voice</label><select id="narrationVoice"><option value="">Automatic English voice</option></select><label class="setting-row" for="narrationRate">Reading speed <output id="narrationRateValue">1×</output></label><input id="narrationRate" type="range" min="0.6" max="1.4" step="0.1" value="1"><div class="narration-buttons"><button id="narrationPlay" type="button">Read this page</button><button id="narrationPause" type="button" disabled>Pause</button><button id="narrationStop" type="button" disabled>Stop</button></div><p class="settings-note narration-status" id="narrationStatus" role="status">Ready to read. Voice choices depend on your device.</p></fieldset>
+    <fieldset class="narration-settings"><legend>Read aloud</legend><p class="settings-note" id="readAloudHelp">Tap the speaker in the top bar to hear the open page. On a two-page spread, it reads left to right.</p><label class="setting-row" for="narrationVoice">Narrator voice</label><select id="narrationVoice"><option value="">Automatic English voice</option></select><label class="check-row"><input id="narrationAllVoices" type="checkbox"> Show all device voices</label><div class="voice-tools"><button id="narrationPreview" type="button">Try this voice</button><button id="refreshNarrationVoices" type="button">Refresh voices</button></div><p class="settings-note" id="voiceHelp">English narrators are shown first, with natural or enhanced voices first when available. <a href="https://support.apple.com/en-ph/guide/mac-help/mchlp2290/mac" target="_blank" rel="noopener noreferrer">Add voices on a Mac</a>, then refresh this list. Browser voice availability varies.</p><label class="setting-row" for="narrationRate">Reading speed <output id="narrationRateValue">1×</output></label><input id="narrationRate" type="range" min="0.6" max="1.4" step="0.1" value="1"><label class="check-row"><input id="narrationAutoAdvance" type="checkbox"> Keep reading and turn pages automatically</label><p class="settings-note">Continue through the book after pressing Play. Turn a page yourself or press Stop to end playback.</p><div class="narration-buttons"><button id="narrationPlay" type="button">Read this page</button><button id="narrationPause" type="button" disabled>Pause</button><button id="narrationStop" type="button" disabled>Stop</button></div><p class="settings-note narration-status" id="narrationStatus" role="status">Ready to read. Voice choices depend on your device.</p></fieldset>
     <fieldset><legend>Page palette</legend><div class="theme-grid" id="themeChoices">
       <button data-theme="candlelight" style="--swatch:#f7e3bf">Candlelight</button><button data-theme="daylight" style="--swatch:#fffaf0">Daylight</button><button data-theme="midnight" style="--swatch:#252538">Midnight</button><button data-theme="rose" style="--swatch:#f5dfe3">Rose garden</button><button data-theme="sage" style="--swatch:#dfe8d6">Woodland</button><button data-theme="lavender" style="--swatch:#e9e1f3">Moonflower</button>
     </div></fieldset>
