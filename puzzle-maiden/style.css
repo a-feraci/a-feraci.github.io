@@ -36,3 +36,5 @@ dialog{color:#f5e2c9;background:linear-gradient(135deg,#301a36,#170d24);border:1
 .page.right .page-inner{padding-right:24%}.page.left .page-inner{padding-left:18%}
 .art-page.right .page-inner,.art-page.left .page-inner{padding:0}
 .preview-right .preview-copy{right:24%}
+.page.right .page-inner,.page.left .page-inner{padding-bottom:clamp(130px,24vh,230px)}
+.art-page.right .page-inner,.art-page.left .page-inner{padding:0}
